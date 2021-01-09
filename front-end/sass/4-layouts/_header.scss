@@ -19,7 +19,8 @@ header {
   & ul {
     //background-color: red;
     display: flex;
-    flex-direction: row;
+    justify-content: space-around;
+    padding-right: 50px;
     & li {
       list-style: none;
       font-size: 25px;
