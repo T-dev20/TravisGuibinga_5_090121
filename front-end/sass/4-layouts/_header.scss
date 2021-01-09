@@ -11,7 +11,7 @@ header {
     }
   }
   & ul {
-    background-color: red;
+    //background-color: red;
     display: flex;
     flex-direction: row;
     height: 10vh;
@@ -21,6 +21,15 @@ header {
       & p {
         font-size: x-large;
       }
+    }
+  }
+  & nav {
+    & a > img {
+      display: inline-block;
+      position: absolute;
+      left: 235px;
+      top: 135px;
+      width: 10%;
     }
   }
 }
