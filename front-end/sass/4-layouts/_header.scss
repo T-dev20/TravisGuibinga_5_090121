@@ -20,13 +20,9 @@ header {
     //background-color: red;
     display: flex;
     flex-direction: row;
-    height: 10vh;
-    font-size: 15px;
     & li {
       list-style: none;
-      & p {
-        font-size: x-large;
-      }
+      font-size: 25px;
     }
   }
 }
