@@ -14,13 +14,13 @@ header {
     background-color: red;
     display: flex;
     flex-direction: row;
-    height: 55vh;
-    margin-right: 0rem;
+    height: 10vh;
+    font-size: 15px;
     & li {
       list-style: none;
-    }
-    & img {
-      color: royalblue;
+      & p {
+        font-size: x-large;
+      }
     }
   }
 }
