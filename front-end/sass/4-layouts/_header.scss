@@ -24,6 +24,9 @@ header {
     & li {
       list-style: none;
       font-size: 25px;
+      & a {
+        color: black;
+      }
     }
   }
 }
