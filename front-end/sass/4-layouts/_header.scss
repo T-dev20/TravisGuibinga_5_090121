@@ -1,5 +1,5 @@
 header {
-  background-color: rgb(243, 233, 241);
+  background-color: $color-primary;
   display: flex;
   flex-direction: column;
   @media (min-width: 768px) {
