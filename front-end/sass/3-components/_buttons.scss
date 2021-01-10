@@ -10,6 +10,15 @@
   color: black;
   cursor: pointer;
   transition: all 300ms ease-in-out;
+  @media (min-width: 375px) and (max-width: 430px) {
+    margin-left: 75px;
+  }
+  @media (min-width: 599px) and (max-width: 768px) {
+    width: 30%;
+    margin-left: 260px;
+    margin-top: 75px;
+    font-size: large;
+  }
   &:hover {
     background-color: black;
     color: white;
