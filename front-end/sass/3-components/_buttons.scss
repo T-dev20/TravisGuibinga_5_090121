@@ -1,0 +1,17 @@
+.presentation_btn {
+  width: 60%;
+  height: 55px;
+  border: 1px solid transparent;
+  border-radius: 2.2rem;
+  margin-left: 60px;
+  margin-top: 40px;
+  text-align: center;
+  font-size: medium;
+  color: black;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}
