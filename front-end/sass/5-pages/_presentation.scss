@@ -1,3 +1,10 @@
 #presentation {
   background-color: $color-presentation;
+  margin-top: 20px;
+  padding-top: 35px;
+  & p {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+  }
 }
