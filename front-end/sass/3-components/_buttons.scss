@@ -16,7 +16,13 @@
   @media (min-width: 599px) and (max-width: 768px) {
     width: 30%;
     margin-left: 260px;
-    margin-top: 75px;
+    margin-top: 55px;
+    font-size: large;
+  }
+  @media (min-width: 780px) {
+    width: 15%;
+    margin-left: 630px;
+    margin-top: 55px;
     font-size: large;
   }
   &:hover {
