@@ -2,4 +2,13 @@
   margin-top: 3rem;
   display: grid;
   grid-column: 1fr;
+  grid-gap: 1.5rem;
+  & div > img {
+    object-fit: cover;
+    width: 100%;
+  }
+  & div {
+    background-color: yellowgreen;
+    width: 100%;
+  }
 }
