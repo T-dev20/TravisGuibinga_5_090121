@@ -10,5 +10,8 @@
   & div {
     background-color: yellowgreen;
     width: 100%;
+    & .products--alt {
+      height: 430px;
+    }
   }
 }
