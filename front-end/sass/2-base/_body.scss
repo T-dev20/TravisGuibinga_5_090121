@@ -1,4 +1,9 @@
 body {
   font-family: monospace, Courier;
   margin: 0;
+  & #section_products > h2 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: -50px;
+  }
 }
