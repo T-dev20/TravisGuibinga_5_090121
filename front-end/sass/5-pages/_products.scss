@@ -19,7 +19,7 @@
   }
   & div {
     border: 2px solid $color-primary;
-
+    box-shadow: 2px 5px 15px $color-presentation;
     height: 400px;
     border-radius: 2rem 2rem 0 0;
     @media (min-width: 768px) and (max-width: 1023px) {
