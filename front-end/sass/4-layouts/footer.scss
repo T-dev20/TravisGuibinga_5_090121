@@ -3,7 +3,15 @@ footer {
   margin-top: 10rem;
   display: flex;
   flex-direction: column;
-
+  & div {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 90px;
+    width: 50%;
+    & .icon--footer {
+      font-size: 25px;
+    }
+  }
   & p {
     font-size: 20px;
     color: white;
