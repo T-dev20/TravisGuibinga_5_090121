@@ -1,10 +1,13 @@
 #presentation {
   background-color: $color-presentation;
-  margin-top: 20px;
+
   padding-top: 35px;
-  height: 20rem;
+  height: 26rem;
+  @media (min-width: 768px) and (max-width: 1023px) {
+    height: 30rem;
+  }
   @media (min-width: 1024px) {
-    height: 445px;
+    height: 35rem;
   }
   & p {
     text-align: center;
