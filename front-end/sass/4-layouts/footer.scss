@@ -1,5 +1,12 @@
 footer {
-  height: 100px;
   background-color: $color-presentation;
   margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+
+  & p {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+  }
 }
