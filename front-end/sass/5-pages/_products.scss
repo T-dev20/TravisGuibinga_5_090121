@@ -1,5 +1,5 @@
 #products {
-  margin-top: 3rem;
+  margin: 3rem;
   display: grid;
   grid-column: 1fr;
   grid-gap: 1.5rem;
@@ -19,7 +19,7 @@
   }
   & div {
     border: 2px solid $color-primary;
-    box-shadow: 2px 5px 15px $color-presentation;
+    box-shadow: 1.5px 3px 15px #d3cccc;
     height: 400px;
     border-radius: 2rem 2rem 0 0;
     @media (min-width: 768px) and (max-width: 1023px) {
@@ -41,6 +41,16 @@
   & .products--prod2And4Moved {
     @media (min-width: 1024px) {
       margin-right: 250px;
+    }
+  }
+  & .products--prod5Moved {
+    & > img {
+      width: 44%;
+    }
+    @media (min-width: 1024px) {
+      margin-left: 250px;
+      width: 135.5%;
+      height: auto;
     }
   }
 }
