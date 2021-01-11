@@ -38,4 +38,9 @@
       margin-left: 250px;
     }
   }
+  & .products--prod2And4Moved {
+    @media (min-width: 1024px) {
+      margin-right: 250px;
+    }
+  }
 }
