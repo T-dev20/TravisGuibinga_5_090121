@@ -33,4 +33,9 @@
       height: 400px;
     }
   }
+  & .products--prodMoved {
+    @media (min-width: 1024px) {
+      margin-left: 250px;
+    }
+  }
 }
