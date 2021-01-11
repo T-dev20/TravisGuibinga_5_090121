@@ -3,6 +3,9 @@
   margin-top: 20px;
   padding-top: 35px;
   height: 20rem;
+  @media (min-width: 1024px) {
+    height: 445px;
+  }
   & p {
     text-align: center;
     font-size: 18px;
