@@ -44,6 +44,14 @@
     }
   }
   & .products--prod5Moved {
+    @media (min-width: 768px) {
+      margin-left: 20px;
+      width: 189%;
+      height: auto;
+      img {
+        width: 48%;
+      }
+    }
     @media (min-width: 1024px) {
       margin-left: 250px;
       width: 135.5%;
