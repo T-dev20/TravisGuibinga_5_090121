@@ -1,5 +1,5 @@
 #products {
-  margin: 3rem;
+  margin: 3rem 0 3rem 0;
   display: grid;
   grid-column: 1fr;
   grid-gap: 1.5rem;
@@ -44,13 +44,13 @@
     }
   }
   & .products--prod5Moved {
-    & > img {
-      width: 44%;
-    }
     @media (min-width: 1024px) {
       margin-left: 250px;
       width: 135.5%;
       height: auto;
+      img {
+        width: 44%;
+      }
     }
   }
 }
