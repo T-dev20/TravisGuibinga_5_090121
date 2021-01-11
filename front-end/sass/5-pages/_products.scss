@@ -1,5 +1,5 @@
 #products {
-  margin: 3rem 0 3rem 0;
+  margin: 5rem 0 3rem 0;
   display: grid;
   grid-column: 1fr;
   grid-gap: 1.5rem;
@@ -7,10 +7,12 @@
     grid-template-columns: 1fr 1fr;
     row-gap: 2rem;
     column-gap: 0rem;
+    margin-top: 10rem;
   }
   @media (min-width: 1024px) {
     grid-template-columns: 1fr 1fr;
     grid-gap: 4rem;
+    margin-top: 15rem;
   }
   & div > img {
     object-fit: cover;
