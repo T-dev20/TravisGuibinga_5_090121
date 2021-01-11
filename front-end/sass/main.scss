@@ -1,6 +1,11 @@
 @import "./1-utils/variables";
+
 @import "./2-base/body";
+
 @import "./3-components/buttons";
+
 @import "./4-layouts/header";
+@import "./4-layouts/footer.scss";
+
 @import "./5-pages/presentation";
 @import "./5-pages/products";
