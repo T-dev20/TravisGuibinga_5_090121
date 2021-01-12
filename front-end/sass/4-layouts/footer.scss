@@ -17,6 +17,12 @@ footer {
     justify-content: space-around;
     margin-left: 90px;
     width: 50%;
+    @media (min-width: 768px) {
+      margin-left: -20px;
+      width: 30%;
+      padding-top: 1.8rem;
+      height: 42px;
+    }
     & .icon--footer {
       font-size: 25px;
     }
@@ -25,5 +31,8 @@ footer {
     font-size: 20px;
     color: white;
     text-align: center;
+    @media (min-width: 768px) {
+      margin-top: 28px;
+    }
   }
 }
