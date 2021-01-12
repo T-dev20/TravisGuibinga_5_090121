@@ -3,6 +3,12 @@ footer {
   margin-top: 10rem;
   display: flex;
   flex-direction: column;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 5rem;
+    height: 80px;
+  }
   & a {
     text-decoration: none;
   }
