@@ -5,7 +5,8 @@ function getNameAndPriceProd() {
         if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
             var response = JSON.parse(this.responseText);
             var produit1 = document.getElementById('product1_title');
-            produit1.textContent = response.name;
+            produit1.innerHTML = response.name;
+            console.log(response);
       }
     };
     request.open("GET", "http://localhost:3000/api/furniture/");
@@ -13,6 +14,7 @@ function getNameAndPriceProd() {
     }
 
 getNameAndPriceProd();
+
 
 /*const produitSell = "furniture"  //Au choix entre : "cameras" - "furniture" - "teddies"
 const APIURL = "http://localhost:3000/api/" + produitSell + "/";
