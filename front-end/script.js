@@ -18,7 +18,7 @@ provideProducts = () =>{
 			if(this.readyState == XMLHttpRequest.DONE && this.status == 200) 
 			{
 				resolve(JSON.parse(this.responseText));
-				console.log("Administration : connection ok");
+				console.log("Administration : connection API ok");
 
 				//L'appel est réussi => suppression des message d'erreur
 				error = document.getElementById("error");
