@@ -1,0 +1,12 @@
+#error {
+  text-align: center;
+  margin: 2rem;
+  &__logo {
+    color: #c57863;
+    font-size: 3rem;
+  }
+  &__msg {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
