@@ -11,7 +11,7 @@ let idProduit = "";
 /*Appel de l'API
 **********************************************/
 
-getProduits = () =>{
+provideProducts = () =>{
 	return new Promise((resolve) =>{
 		let request = new XMLHttpRequest();
 		request.onreadystatechange = function() {
