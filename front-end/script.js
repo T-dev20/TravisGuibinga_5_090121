@@ -41,7 +41,7 @@ provideProducts = () =>{
 
 	//Fonction d'affichage de la liste des produits en vente(page index).
 	async function allProductsList(){
-		const products = await getProducts();
+		const products = await provideProducts();
 
 		//Création de la div accueillant la liste des produits
 		let listProducts = document.createElement("div")
@@ -89,3 +89,4 @@ provideProducts = () =>{
 			productLink.textContent = "Voir le produit";
 		});
 };
+allProductsList();
