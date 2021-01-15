@@ -89,4 +89,3 @@ provideProducts = () =>{
 			productLink.textContent = "Voir le produit";
 		});
 };
-allProductsList();
