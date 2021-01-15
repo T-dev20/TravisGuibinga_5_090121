@@ -1,13 +1,12 @@
 footer {
   background-color: $color-presentation;
-  margin-top: 10rem;
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 5rem;
-    height: 80px;
+    height: 140px;
   }
   & a {
     text-decoration: none;
