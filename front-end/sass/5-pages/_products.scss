@@ -3,6 +3,9 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 3rem;
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
   &__block {
     display: flex;
     flex-direction: column;
@@ -16,9 +19,7 @@
 
 .list-product__block--info {
   color: black;
+  font-size: medium;
   text-align: center;
   margin-bottom: 2rem;
-  & > h2 {
-    font-size: 25px;
-  }
 }
