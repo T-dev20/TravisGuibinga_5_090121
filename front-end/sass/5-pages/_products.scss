@@ -1,6 +1,9 @@
 #section_products {
-  & h2 {
+  & > h2 {
     text-align: center;
+    @media (min-width: 768px) {
+      font-size: xx-large;
+    }
   }
 }
 
