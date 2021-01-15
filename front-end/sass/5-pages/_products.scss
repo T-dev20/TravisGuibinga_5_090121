@@ -1,6 +1,12 @@
 .list-products {
-  margin-top: 5rem;
-  display: grid;
-  grid-column: 1fr 1fr;
-  grid-gap: 2rem;
+  margin-top: 3rem;
+  &__block {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    border: aqua 1px solid;
+    &--img img {
+      width: 100%;
+    }
+  }
 }
