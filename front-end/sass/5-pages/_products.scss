@@ -15,11 +15,9 @@
 }
 
 .list-product__block--info {
-  background-color: red;
-  height: 500px;
   color: black;
+  text-align: center;
   & > h2 {
     font-size: 25px;
-    color: black;
   }
 }
