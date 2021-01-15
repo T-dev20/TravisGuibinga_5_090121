@@ -1,9 +1,11 @@
 .list-products {
   margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
   &__block {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 2rem;
+    display: flex;
+    flex-direction: column;
     border: aqua 1px solid;
     &--img img {
       width: 100%;
