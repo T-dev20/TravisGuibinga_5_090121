@@ -84,8 +84,8 @@ provideProducts = () =>{
 			productContentInfo.appendChild(productLink);
 
 			//Déterminer le contenu des balises h2,p et a
-			productName.textContent = produit.name;
-			productPrice.textContent = produit.price / 100 + " euros";
+			productName.textContent = product.name;
+			productPrice.textContent = product.price / 100 + " euros";
 			productLink.textContent = "Voir le produit";
 		});
 };

@@ -6,9 +6,20 @@
   &__block {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     border: aqua 1px solid;
     &--img img {
       width: 100%;
     }
+  }
+}
+
+.list-product__block--info {
+  background-color: red;
+  height: 500px;
+  color: black;
+  & > h2 {
+    font-size: 25px;
+    color: black;
   }
 }
