@@ -1,16 +1,15 @@
 .list-products {
-  margin-top: 3rem;
+  margin-top: 5rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 3rem;
-  border: 1px solid gray;
   @media (min-width: 768px) and (max-width: 1020px) {
     grid-template-columns: 1fr 1fr;
   }
   @media (min-width: 1023px) {
     grid-template-columns: 1fr 1fr;
-    margin: 3rem auto;
-    width: 80%;
+    margin: 5rem auto;
+    width: 70%;
   }
   /*cartes de chaque produit*/
   &__block {
@@ -18,10 +17,6 @@
     flex-direction: column;
     justify-content: space-evenly;
     @include shadow;
-    @media (min-width: 1023px) {
-      margin: 0 auto;
-      width: 80%;
-    }
     &--img img {
       width: 100%;
     }
