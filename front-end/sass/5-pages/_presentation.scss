@@ -2,11 +2,14 @@
   background-color: $color-presentation;
   padding-top: 35px;
   height: 26rem;
+  margin-bottom: 3rem;
   @media (min-width: 768px) and (max-width: 1023px) {
     height: 30rem;
+    margin-bottom: 5rem;
   }
   @media (min-width: 1024px) {
     height: 35rem;
+    margin-bottom: 5rem;
   }
   & h1 {
     font-size: 30px;
