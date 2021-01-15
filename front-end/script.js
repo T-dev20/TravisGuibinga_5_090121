@@ -72,9 +72,7 @@ provideProducts = () =>{
 			productImage.setAttribute("alt", "image du produit"); 
 			productLink.setAttribute("href", "product.html?id=" + product._id);
 
-			//Block conteneur en flex
-			//Block gauche comprend l'image du produit
-			//Bloc droit comprend le nom/prix/le lien du produit
+			//Les trois div précédentes reçoivent les autres éléments comme enfants
 			listProducts.appendChild(productContent);
 			productContent.appendChild(productContentImg);
 			productContentImg.appendChild(productImage);
