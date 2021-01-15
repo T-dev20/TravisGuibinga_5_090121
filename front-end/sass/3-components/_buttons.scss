@@ -18,7 +18,17 @@
     margin-left: 260px;
     font-size: large;
   }
-  @media (min-width: 780px) {
+  @media (min-width: 780px) and (max-width: 1023px) {
+    width: 15%;
+    margin-left: 630px;
+    font-size: large;
+  }
+  @media (min-width: 1024px) and (max-width: 1030px) {
+    width: 22%;
+    margin-left: 400px;
+    font-size: large;
+  }
+  @media (min-width: 1035px) {
     width: 15%;
     margin-left: 630px;
     font-size: large;
