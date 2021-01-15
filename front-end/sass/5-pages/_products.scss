@@ -11,6 +11,9 @@
     flex-direction: column;
     justify-content: space-evenly;
     @include shadow;
+    @media (min-width: 1023px) {
+      width: 70%;
+    }
     &--img img {
       width: 100%;
     }
