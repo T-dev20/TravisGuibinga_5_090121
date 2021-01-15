@@ -45,7 +45,7 @@ provideProducts = () =>{
 
 		//Création de la div accueillant la liste des produits
 		let listProducts = document.createElement("div")
-		listProducts.setAttribute("id", "list-products");
+		listProducts.setAttribute("class", "list-products");
 		//Ajout de la div dans le HTML en tant qu'enfant de la section des produits
 		let main = document.getElementById("section_products");
 		main.appendChild(listProducts);
