@@ -17,6 +17,9 @@ if(localStorage.getItem("basketUser")){
 	localStorage.setItem("basketUser", basketInit);
 }
 
+//Récupération du panier
+let userPanier = localStorage.getItem("basketUser");
+
 /*Appel de l'API
 **********************************************/
 
