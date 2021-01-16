@@ -8,7 +8,8 @@ const APIURL = "http://localhost:3000/api/" + productSelect + "/";
 
 let idProduct = "";
 
-
+/*L'utilisateur à besoin d'un panier dans le localStorage de son navigateur
+On vérifie que le panier existe dans le localStorage, sinon on le crée et on l'envoie dans le localStorage au premier chargement du site quelque soit la page*/
 if(localStorage.getItem("basketUser")){
 	console.log("Administration : Panier présent dans le localStorage");
 }else{
