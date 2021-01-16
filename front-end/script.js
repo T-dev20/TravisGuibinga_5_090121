@@ -9,10 +9,12 @@ const APIURL = "http://localhost:3000/api/" + productSelect + "/";
 let idProduct = "";
 
 
-if(localStorage.getItem("basket")){
+if(localStorage.getItem("basketUser")){
 	console.log("Administration : Panier présent dans le localStorage");
 }else{
 	console.log("Administration : Panier non présent dans le localStorage. Créons-le!");
+	let basketInit = [];
+	localStorage.setItem("basketUser", basketInit);
 }
 
 /*Appel de l'API
