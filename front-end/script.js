@@ -108,5 +108,6 @@ du produit sélectionné.
 *************************************************/
 
 async function productDetails (){
-
+	//Collecter l'URL du produit après le "?id=" pour le récupérer sur l'API
+    idProduit = location.search.substring(4);
 }
