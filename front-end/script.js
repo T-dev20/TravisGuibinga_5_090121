@@ -111,5 +111,12 @@ async function productDetails (){
 	//Collecter l'URL du produit après le "?id=" pour le récupérer sur l'API
 	idProduct = location.search.substring(4);
 	const productSelected = await provideProducts();
-	console.log("Administration : Vous êtes sur la page du produit id_" + productSelected._id); 
+	console.log("Administration : Vous êtes sur la page du produit id_" + productSelected._id);
+	
+	//Remplissage de la fiche produit
+    document.getElementById("ProductImg").setAttribute("src", productSelected.imageUrl);
+    document.getElementById("ProductName").innerHTML = productSelected.name;
+    document.getElementById("product-description").innerHTML = productSelected.description;
+    document.getElementById("productPrice").innerHTML = productSelected.price / 100 + " euros";
+
 }
