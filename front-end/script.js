@@ -114,8 +114,8 @@ async function productDetails (){
 	console.log("Administration : Vous êtes sur la page du produit id_" + productSelected._id);
 	
 	//Remplissage de la fiche produit
-    document.getElementById("ProductImg").setAttribute("src", productSelected.imageUrl);
-    document.getElementById("ProductName").innerHTML = productSelected.name;
+    document.getElementById("productImg").setAttribute("src", productSelected.imageUrl);
+    document.getElementById("productName").innerHTML = productSelected.name;
     document.getElementById("product-description").innerHTML = productSelected.description;
     document.getElementById("productPrice").innerHTML = productSelected.price / 100 + " euros";
 
