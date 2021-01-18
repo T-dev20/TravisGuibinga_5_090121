@@ -109,5 +109,7 @@ du produit sélectionné.
 
 async function productDetails (){
 	//Collecter l'URL du produit après le "?id=" pour le récupérer sur l'API
-    idProduct = location.search.substring(4);
+	idProduct = location.search.substring(4);
+	const productSelected = await provideProducts();
+	console.log("Administration : Vous êtes sur la page du produit id_" + productSelected._id); 
 }
