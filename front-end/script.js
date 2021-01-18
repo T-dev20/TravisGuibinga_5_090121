@@ -101,3 +101,12 @@ if(localStorage.getItem("basketUser")){
 
 //Récupération du panier
 let userPanier = localStorage.getItem("basketUser");
+
+
+/*Affichage de la page produit, avec présentation
+du produit sélectionné.
+*************************************************/
+
+async function productDetails (){
+
+}
