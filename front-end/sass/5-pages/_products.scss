@@ -71,6 +71,11 @@
   @media (min-width: 768px) {
     flex-direction: row;
   }
+  &__img {
+    @media (min-width: 1030px) {
+      width: 70%;
+    }
+  }
   & #productImg {
     width: 100%;
   }
