@@ -38,3 +38,19 @@
     color: white;
   }
 }
+
+/*Bouton ajouter au panier*/
+
+.btn {
+  width: 60%;
+  height: 55px;
+  border: 1px solid transparent;
+  border-radius: 2.2rem;
+  margin-left: 60px;
+  text-align: center;
+  font-size: medium;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
