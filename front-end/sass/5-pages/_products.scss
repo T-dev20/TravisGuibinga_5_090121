@@ -68,6 +68,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
   & #productImg {
     width: 100%;
   }
