@@ -58,6 +58,9 @@
   & > h2 {
     font-size: $size-phone-h2;
     text-align: center;
+    @media (min-width: 768px) {
+      font-size: $size-desktop-h2;
+    }
   }
 }
 
