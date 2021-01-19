@@ -55,7 +55,7 @@
 /*Début_styles page produit sélectionné*/
 #section_productSelected {
   margin-top: 3rem;
-  & h2 {
+  & > h2 {
     font-size: $size-phone-h2;
     text-align: center;
   }
@@ -70,7 +70,14 @@
   }
   &__description {
     text-align: center;
+    &__head {
+      font-size: 1.3rem;
+    }
   }
+}
+
+.bloc-prod__description__price {
+  font-size: 1.3rem;
 }
 
 /*Fin_styles page produit sélectionné*/
