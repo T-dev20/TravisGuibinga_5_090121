@@ -82,9 +82,6 @@
     text-align: center;
     &__head {
       font-size: 1.3rem;
-      @media (min-width: 768px) {
-        margin-top: -0.35rem;
-      }
       @media (min-width: 1030px) {
         font-size: 2rem;
         margin-top: 5rem;
