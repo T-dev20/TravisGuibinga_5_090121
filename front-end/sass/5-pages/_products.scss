@@ -71,11 +71,11 @@
   @media (min-width: 768px) {
     flex-direction: row;
   }
-  &__img {
+  /*&__img {
     @media (min-width: 1030px) {
       width: 70%;
     }
-  }
+  }*/
   & #productImg {
     width: 100%;
   }
@@ -97,6 +97,13 @@
   font-size: 1.3rem;
   @media (min-width: 1030px) {
     font-size: 2rem;
+  }
+}
+
+#product-description,
+#productPrice {
+  @media (min-width: 1030px) {
+    font-size: 1.2rem;
   }
 }
 
