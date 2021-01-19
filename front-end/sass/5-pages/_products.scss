@@ -69,6 +69,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   border: 3px solid $color-primary;
+  padding: 0.3rem;
   @media (min-width: 768px) {
     flex-direction: row;
   }
