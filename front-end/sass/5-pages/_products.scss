@@ -68,14 +68,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  border: 3px solid $color-primary;
   @media (min-width: 768px) {
     flex-direction: row;
   }
-  /*&__img {
-    @media (min-width: 1030px) {
-      width: 70%;
-    }
-  }*/
   & #productImg {
     width: 100%;
   }
