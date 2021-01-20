@@ -119,4 +119,7 @@ async function productDetails (){
     document.getElementById("product-description").innerHTML = productSelected.description;
     document.getElementById("productPrice").innerHTML = productSelected.price / 100 + " euros";
 
+    		let optionProduct = document.createElement("option");
+    		document.getElementById("optionSelect").appendChild(optionProduct).innerHTML = productSelected.lenses;
+
 }
