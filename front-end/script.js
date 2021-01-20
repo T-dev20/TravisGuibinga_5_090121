@@ -119,7 +119,9 @@ async function productDetails (){
     document.getElementById("product-description").innerHTML = productSelected.description;
     document.getElementById("productPrice").innerHTML = productSelected.price / 100 + " euros";
 
+	//Pour chaque verni on crée une option permettant à l'utilisateur de faire son choix
+	productSelected.varnish.forEach((product)=>{
     		let optionProduct = document.createElement("option");
-    		document.getElementById("optionSelect").appendChild(optionProduct).innerHTML = productSelected.lenses;
-
+    		document.getElementById("optionSelect").appendChild(optionProduct).innerHTML = product;
+    	});
 }
