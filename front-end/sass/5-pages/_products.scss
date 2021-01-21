@@ -105,3 +105,10 @@
 }
 
 /*Fin_styles page produit sélectionné*/
+
+.basketLink {
+  text-decoration: none;
+  & .countProd {
+    font-size: 1.3rem;
+  }
+}
