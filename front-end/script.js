@@ -96,11 +96,11 @@ if(localStorage.getItem("basketUser")){
 }else{
 	console.log("Administration : Panier non présent dans le localStorage. Créons-le!");
 	let basketInit = [];
-	localStorage.setItem("basketUser", basketInit);
+	localStorage.setItem("basketUser", JSON.stringify(basketInit));
 }
 
 //Récupération du panier
-let userPanier = localStorage.getItem("basketUser");
+let userBasket = localStorage.getItem("basketUser");
 
 
 /*Affichage de la page produit, avec présentation
