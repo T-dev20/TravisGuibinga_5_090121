@@ -118,5 +118,8 @@
     color: rgb(176, 109, 161);
     margin-bottom: -16px;
     margin-left: 5px;
+    @media (min-width: 768px) {
+      font-size: 1.4rem;
+    }
   }
 }
