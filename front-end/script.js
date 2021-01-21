@@ -89,7 +89,8 @@ provideProducts = () =>{
 };
 
 /*L'utilisateur à besoin d'un panier dans le localStorage de son navigateur
-On vérifie que le panier existe dans le localStorage, sinon on le crée et on l'envoie dans le localStorage au premier chargement du site quelque soit la page*/
+On vérifie que le panier existe dans le localStorage, sinon on le crée et on l'envoie dans 
+le localStorage au premier chargement du site quelque soit la page*/
 
 if(localStorage.getItem("basketUser")){
 	console.log("Administration : Panier présent dans le localStorage");
@@ -131,12 +132,40 @@ async function productDetails (){
  *******************************************************/
 function addToBasket(){
 	//Écoute de l'évènement clic du btn pour mettre le produit dans le panier
-		let addProd = document.getElementById("addProductToBasket");
-		addProd.addEventListener("click", async function() {
+		var addProd = document.getElementById("addProductToBasket");
+		var countProd = document.getElementById("prodNumber");
+		addProd.addEventListener('click', () => {
+			cartCount();
+		})
+
+	function cartCount(){
+			let prdCount = localStorage.getItem('counterNum');
+			prdCount = parseInt(prdCount);
+			if(prdCount){
+				localStorage.setItem('counterNum', prdCount + 1);
+				countProd.textContent = prdCount + 1;
+			}else{
+				localStorage.setItem('counterNum', 1);
+				countProd.textContent = prdCount = 1;
+			}
+
+			
+			addProd.addEventListener("click", async function() {
+			const produits = await provideProducts();
+			//Récupération du panier dans le localStorage et ajout du produit dans le panier avant revoit dans le localStorage
+			userBasket.push(produits);
+			localStorage.setItem("basketUser", JSON.stringify(userBasket));
+			console.log("Administration : le produit a été ajouté au panier");
+  });
+};
+}
+
+/*addProd.addEventListener("click", async function() {
 		const produits = await provideProducts();
 		//Récupération du panier dans le localStorage et ajout du produit dans le panier avant revoit dans le localStorage
 		userBasket.push(produits);
 		localStorage.setItem("basketUser", JSON.stringify(userBasket));
 		console.log("Administration : le produit a été ajouté au panier");
-  });
-};
+
+		
+  });*/
