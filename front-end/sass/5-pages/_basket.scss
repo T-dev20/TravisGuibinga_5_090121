@@ -1,4 +1,7 @@
 .form__group {
   display: flex;
   flex-direction: column;
+  & .input-control {
+    margin-bottom: 10px;
+  }
 }
