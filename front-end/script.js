@@ -125,3 +125,7 @@ async function productDetails (){
     		document.getElementById("optionSelect").appendChild(optionProduct).innerHTML = product;
     	});
 }
+
+function addToBasket(){
+	
+}
