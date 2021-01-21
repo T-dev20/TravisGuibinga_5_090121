@@ -140,7 +140,10 @@ function addToBasket(){
 
 	function cartCount(){
 			let prdCount = localStorage.getItem('counterNum');
+			//valeur du conterNum passé en type 'Number'  
 			prdCount = parseInt(prdCount);
+			//Si la valeur de prdCount existe,alors on ajoute 1 dans le localStorage et le compteur visible
+			//sinon on crée un paire clé/valeur initialisée à 1
 			if(prdCount){
 				localStorage.setItem('counterNum', prdCount + 1);
 				countProd.textContent = prdCount + 1;
@@ -148,17 +151,23 @@ function addToBasket(){
 				localStorage.setItem('counterNum', 1);
 				countProd.textContent = prdCount = 1;
 			}
-
 			
-			addProd.addEventListener("click", async function() {
-			const produits = await provideProducts();
-			//Récupération du panier dans le localStorage et ajout du produit dans le panier avant revoit dans le localStorage
-			userBasket.push(produits);
-			localStorage.setItem("basketUser", JSON.stringify(userBasket));
-			console.log("Administration : le produit a été ajouté au panier");
-  });
 };
+addPanier() ;
 }
+
+/*Fonction pour ajout de produit au panier et renvoie de l'historique en Objet Js*/
+function addPanier() {
+  	//Au clic de l'user pour mettre le produit dans le panier
+  	let inputBuy = document.getElementById("addProductToBasket");
+  	inputBuy.addEventListener("click", async function() {
+  		const prod = await provideProducts();
+  	//Récupération du panier dans le localStorage et ajout du produit dans le panier avant revoit dans le localStorage
+  	userBasket.push(prod);
+  	localStorage.setItem("basketUser", JSON.stringify(userBasket));
+  	console.log("Administration : le produit a été ajouté au panier");
+  });
+  };
 
 /*addProd.addEventListener("click", async function() {
 		const produits = await provideProducts();
