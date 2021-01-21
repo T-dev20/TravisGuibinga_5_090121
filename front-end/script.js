@@ -99,8 +99,8 @@ if(localStorage.getItem("basketUser")){
 	localStorage.setItem("basketUser", JSON.stringify(basketInit));
 }
 
-//Récupération du panier
-let userBasket = localStorage.getItem("basketUser");
+//Récupération du panier et transformation des données en object Js 
+let userBasket = JSON.parse(localStorage.getItem("basketUser"));
 
 
 /*Affichage de la page produit, avec présentation
