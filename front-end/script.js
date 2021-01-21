@@ -126,6 +126,13 @@ async function productDetails (){
     	});
 }
 
+
+/*Fonction ajouter le produit au panier de l'utilisateur
+ *******************************************************/
 function addToBasket(){
-	
-}
+	//Écoute de l'évènement clic du btn pour mettre le produit dans le panier
+	  let addProd = document.getElementById("addProductToBasket");
+	  addProd.addEventListener("click", async function() {
+  	  
+  });
+};
