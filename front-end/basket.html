@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/aa5854860e.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Orinoco-furnitures</title>
+  </head>
+  <body>
+    <div id="main_page">
+      <header>
+        <a href="index.html"
+          ><div class="logo_content">
+            <img src="logo.png" alt="logo_orinoco" /></div
+        ></a>
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html">Accueil</a>
+            </li>
+            <li>
+              <a href="basket.html" class="basketLink"
+                ><i class="fas fa-shopping-cart cart"></i
+                ><span id="prodNumber" class="countProd">0</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section id="section_InfoBasket">
+        <div id="basket-resume">
+          <p id="emptyBasket">Votre panier est vide</p>
+        </div>
+        <div class="form">
+          <form method="post" name="form-basket">
+            <fieldset>
+              <legend>Civilité</legend>
+              <div class="form__group">
+                <div class="form__group">
+                  <label for="formNom">Nom : </label>
+                  <input
+                    type="text"
+                    id="formNom"
+                    class="form-control input-control"
+                    required
+                    name="formNom"
+                  />
+                </div>
+                <div class="form__group">
+                  <label for="formPrenom" class="right-inline">Prénom :</label>
+                  <input
+                    type="text"
+                    id="formPrenom"
+                    class="form-control input-control"
+                    required
+                    name="formPrenom"
+                  />
+                </div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Coordonnées</legend>
+              <div class="form__group">
+                <label for="formMail">E-mail :</label>
+                <input
+                  type="email"
+                  id="formMail"
+                  class="form-control input-control"
+                  required
+                  name="formMail"
+                />
+              </div>
+              <div class="form__group">
+                <label for="formAdresse">Adresse :</label>
+                <input
+                  type="text"
+                  id="formAdresse"
+                  class="form-control input-control"
+                  required
+                  name="formAdresse"
+                />
+              </div>
+              <div class="form__group">
+                <label for="formVille">Ville :</label>
+                <input
+                  type="text"
+                  id="formVille"
+                  class="form-control input-control"
+                  required
+                  name="formVille"
+                />
+              </div>
+            </fieldset>
+            <input
+              type="button"
+              value="Je valide mon panier et mes informations"
+              class="btn btn--form"
+              id="envoiPost"
+            />
+          </form>
+        </div>
+      </section>
+      <footer>
+        <p>Mentions légales</p>
+        <div>
+          <i class="fab fa-facebook-f icon--footer"></i>
+          <i class="fab fa-youtube icon--footer"></i>
+          <i class="fab fa-instagram-square icon--footer"></i>
+        </div>
+
+        <a href="#"><p>Contact</p></a>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script></script>
+  </body>
+</html>
