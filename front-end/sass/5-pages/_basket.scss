@@ -26,21 +26,30 @@ fieldset {
     @media (min-width: 768px) {
       display: flex;
       flex-direction: row;
-      justify-content: space-evenly;
+      justify-content: space-around;
+    }
+    @media (min-width: 1030px) {
+      width: 60%;
+      margin-left: -10px;
+    }
+    & input {
+      @media (min-width: 1030px) {
+        width: 70%;
+      }
     }
   }
-}
 
-#form-block-coordonnées {
-  @media (min-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-  & .form__group {
+  #form-block-coordonnées {
     @media (min-width: 768px) {
+      display: flex;
       flex-direction: column;
       justify-content: space-evenly;
+    }
+    & .form__group {
+      @media (min-width: 768px) {
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
     }
   }
 }
