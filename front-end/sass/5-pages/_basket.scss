@@ -44,3 +44,11 @@ fieldset {
     }
   }
 }
+
+#section_InfoBasket {
+  @media (min-width: 1030px) {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
