@@ -4,9 +4,6 @@
   & .input-control {
     margin-bottom: 10px;
     padding: 4px;
-    @media (min-width: 768px) {
-      width: 60%;
-    }
   }
 }
 
@@ -14,6 +11,24 @@ fieldset {
   display: block;
   margin: 0 auto;
   width: 80%;
+  @media (min-width: 768px) {
+    width: 70%;
+  }
+}
+
+.form__group-block {
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  & div {
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
 }
 
 #form-block-coordonnées {
@@ -26,11 +41,6 @@ fieldset {
     @media (min-width: 768px) {
       flex-direction: column;
       justify-content: space-evenly;
-    }
-    & input {
-      @media (min-width: 768px) {
-        width: 60%;
-      }
     }
   }
 }
