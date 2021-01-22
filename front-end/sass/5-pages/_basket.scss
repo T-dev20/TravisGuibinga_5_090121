@@ -4,6 +4,9 @@
   & .input-control {
     margin-bottom: 10px;
     padding: 4px;
+    @media (min-width: 768px) {
+      width: 60%;
+    }
   }
 }
 
@@ -13,28 +16,21 @@ fieldset {
   width: 80%;
 }
 
-.form__group-block {
-  @media (min-width: 768px) {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  & .form__group {
-    @media (min-width: 768px) {
-      width: 40%;
-      flex-direction: row;
-    }
-  }
-}
-
 #form-block-coordonnées {
   @media (min-width: 768px) {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
   }
-  & input {
+  & .form__group {
     @media (min-width: 768px) {
-      width: 60%;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    & input {
+      @media (min-width: 768px) {
+        width: 60%;
+      }
     }
   }
 }
