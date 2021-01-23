@@ -184,7 +184,8 @@ function recapProducts() {
       let facture = document.createElement("table");
       let firstRowTable = document.createElement("tr");
       let columnName = document.createElement("th");
-      let columnPriceUnit = document.createElement("th");
+	  let columnPriceUnit = document.createElement("th");
+	 // let columnRemove = document.createElement("td");
       let rowTotal = document.createElement("tr");
       let columnRefTotal = document.createElement("th");
       let colPriceTotal = document.createElement("td");
@@ -208,12 +209,13 @@ function recapProducts() {
         let ligneProduct = document.createElement("tr");
         let nameProduct = document.createElement("td");
         let priceUnitProduct = document.createElement("td");
-        let colRemoveProd = document.createElement("i");
+		// let colRemoveProd = document.createElement("i");
+		let colRemoveProd = document.createElement("p");
 
         //Attribution des class pour le css
         ligneProduct.setAttribute("id", "product"+i);
         colRemoveProd.setAttribute("id", "remove"+i);
-        colRemoveProd.setAttribute('class', "fas fa-trash-alt annulerproduct");
+        // colRemoveProd.setAttribute('class', "fas fa-trash-alt annulerproduct");
         //Pour chaque produit on écoute l'évènement clic sur l'icone de la corbeille pour supprimer ce produit
         //bind permet de garder l'incrementation du i qui représente l'index du panier au moment de l'écoute de l'event
         //removeProduct => L249
@@ -226,7 +228,8 @@ function recapProducts() {
         ligneProduct.appendChild(priceUnitProduct);
         ligneProduct.appendChild(colRemoveProd);
 
-        //Contenu des lignes
+		//Contenu des lignes
+		colRemoveProd.textContent = 'supprimer';
         nameProduct.innerHTML = product.name;
         priceUnitProduct.textContent = product.price / 100 + " €";
 	});
