@@ -211,8 +211,8 @@ function recapProducts() {
         let colRemoveProd = document.createElement("i");
 
         //Attribution des class pour le css
-        ligneProduct.setAttribute("id", "product " + i++);
-        colRemoveProd.setAttribute("id", "remove " + i++);
+        ligneProduct.setAttribute("id", "product"+i);
+        colRemoveProd.setAttribute("id", "remove"+i);
         colRemoveProd.setAttribute('class', "fas fa-trash-alt annulerproduct");
         //Pour chaque produit on écoute l'évènement clic sur l'icone de la corbeille pour supprimer ce produit
         //bind permet de garder l'incrementation du i qui représente l'index du panier au moment de l'écoute de l'event

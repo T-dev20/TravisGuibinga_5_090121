@@ -75,3 +75,8 @@ fieldset {
     margin-left: -16px;
   }
 }
+
+table > i {
+  display: block;
+  cursor: pointer;
+}
