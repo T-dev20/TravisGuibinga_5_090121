@@ -210,7 +210,7 @@ function recapProducts() {
         let nameProduct = document.createElement("td");
         let priceUnitProduct = document.createElement("td");
 		// let colRemoveProd = document.createElement("i");
-		let colRemoveProd = document.createElement("p");
+		let colRemoveProd = document.createElement("button");
 
         //Attribution des class pour le css
         ligneProduct.setAttribute("id", "product"+i);
@@ -229,7 +229,7 @@ function recapProducts() {
         ligneProduct.appendChild(colRemoveProd);
 
 		//Contenu des lignes
-		colRemoveProd.textContent = 'supprimer'
+		colRemoveProd.textContent = 'supprimer';
         nameProduct.innerHTML = product.name;
         priceUnitProduct.textContent = product.price / 100 + " €";
 	});
