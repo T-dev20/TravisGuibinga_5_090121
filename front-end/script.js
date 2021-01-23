@@ -98,10 +98,14 @@ if(localStorage.getItem("basketUser")){
 	console.log("Administration : Panier non présent dans le localStorage. Créons-le!");
 	let basketInit = [];
 	localStorage.setItem("basketUser", JSON.stringify(basketInit));
-}
+};
 
+//Tableau et objet demandé par l'API pour la commande
+  	let contact;
+	let products = [];
+	  
 //Récupération du panier et transformation des données en object Js 
-let userBasket = JSON.parse(localStorage.getItem("basketUser"));
+	let userBasket = JSON.parse(localStorage.getItem("basketUser"));
 
 
 /*Affichage de la page produit, avec présentation
