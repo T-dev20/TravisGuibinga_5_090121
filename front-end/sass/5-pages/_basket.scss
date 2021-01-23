@@ -87,6 +87,14 @@ table {
   & tr {
     vertical-align: middle;
     display: table-row;
+    & th {
+      background-color: #ebebeb;
+      display: table-cell;
+      vertical-align: inherit;
+      font-weight: bold;
+      font-size: medium;
+      text-align: center;
+    }
   }
 }
 #remove0 {
