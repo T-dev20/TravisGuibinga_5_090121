@@ -170,3 +170,29 @@ function addPanier() {
   };
 
 
+function recapProducts() {
+	//On vérifie s'il y a au moins un prduit dans le panier
+    if(JSON.parse(localStorage.getItem("basketUser")).length > 0){
+      //S'il n'est pas vide on supprime le message et on créé le tableau récapitulatif
+      document.getElementById("emptyBasket").remove();
+
+      //Création de la structure principale du tableau  
+      let facture = document.createElement("table");
+      let firstRowTable = document.createElement("tr");
+      let columnName = document.createElement("th");
+      let columnPriceUnit = document.createElement("th");
+      let colRemoveProd = document.createElement("th");
+      let rowTotal = document.createElement("tr");
+      let columnRefTotal = document.createElement("th");
+      let colPriceTotal = document.createElement("td");
+
+      //Placement de la structure du tableau dans la page panier
+      let factureSection = document.getElementById("basket-resume");
+      factureSection.appendChild(facture);
+      facture.appendChild(firstRowTable);
+      firstRowTable.appendChild(columnName);
+      columnName.textContent = "Nom du produit";
+      firstRowTable.appendChild(columnPriceUnit);
+      columnPriceUnit.textContent = "Prix du produit";
+}
+}
