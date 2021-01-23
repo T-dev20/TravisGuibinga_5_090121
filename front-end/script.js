@@ -240,8 +240,23 @@ function recapProducts() {
 			totalPaye += product.price / 100;
 		});
 
-		//Affichage du prix total à payer
+		//Affichage du prix total à régler
 		console.log("Administration : " + totalPaye);
 		document.getElementById("sommeTotal").textContent = totalPaye + " €";
 };
 }
+
+function removeProduct(i) {
+		console.log("Administration : Enlever le produit à l'index " + i);
+		//recupérer le array
+		basketUser.splice(i, 1); 
+		console.log("Administration : " + basketUser);
+		//On vide le localstorage
+		localStorage.clear();
+		console.log("Administration : localStorage vidé");
+		//mettre à jour le localStorage avec le nouveau panier
+		localStorage.setItem('basketUser', JSON.stringify(userBasket));
+		console.log("Administration : localStorage mis à jour");
+		//relancer la création de la foncton recapProducts
+		window.location.reload();
+};
