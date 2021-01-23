@@ -169,12 +169,4 @@ function addPanier() {
   });
   };
 
-/*addProd.addEventListener("click", async function() {
-		const produits = await provideProducts();
-		//Récupération du panier dans le localStorage et ajout du produit dans le panier avant revoit dans le localStorage
-		userBasket.push(produits);
-		localStorage.setItem("basketUser", JSON.stringify(userBasket));
-		console.log("Administration : le produit a été ajouté au panier");
 
-		
-  });*/
