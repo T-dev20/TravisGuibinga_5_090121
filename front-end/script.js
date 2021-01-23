@@ -212,7 +212,7 @@ function recapProducts() {
         colRemoveProd.setAttribute('class', "fas fa-trash-alt annulerproduct");
         //Pour chaque produit on écoute l'évènement clic sur l'icone de la corbeille pour supprimer ce produit
         //bind permet de garder l'incrementation du i qui représente l'index du panier au moment de l'écoute de l'event
-        //annulerProduit L233
+        //removeProduct => L249
         colRemoveProd.addEventListener('click', removeProduct.bind(i));
         i++;
 
