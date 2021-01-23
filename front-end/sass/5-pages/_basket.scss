@@ -76,6 +76,14 @@ fieldset {
   }
 }
 
+table {
+  margin: auto;
+  border: none;
+  font-size: 0.8rem;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: table;
+}
 #remove0 {
   display: block;
   cursor: pointer;
