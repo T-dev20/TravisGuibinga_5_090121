@@ -95,6 +95,11 @@ table {
       font-size: medium;
       text-align: center;
     }
+    & td,
+    th {
+      border: 1px solid #bebebe;
+      padding: 10px;
+    }
   }
 }
 #remove0 {
