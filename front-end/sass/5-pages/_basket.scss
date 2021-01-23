@@ -83,6 +83,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   margin-bottom: 3rem;
+  display: table;
+  & tr {
+    vertical-align: middle;
+    display: table-row;
+  }
 }
 #remove0 {
   display: block;
