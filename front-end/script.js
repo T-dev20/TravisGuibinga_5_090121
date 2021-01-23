@@ -266,4 +266,16 @@ function removeProduct(i) {
 		console.log("Administration : localStorage mis à jour");
 		//relancer la création de la foncton recapProducts
 		window.location.reload();
-};
+		return
+}
+
+/*function removeProduct(name) {
+	var basket = JSON.parse(localStorage.getItem("basketUser")).length;
+	for (let i = 0; i < basket; i+= 1) {
+		if (basket[i].name === name) {
+			basket.splice(i, 1)
+			return name;
+		}
+	}
+		
+}*/
