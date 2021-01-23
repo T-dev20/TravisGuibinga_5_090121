@@ -84,6 +84,10 @@ table {
   border-spacing: 0;
   margin-bottom: 3rem;
   display: table;
+  width: 90%;
+  @media (min-width: 1024px) {
+    width: 100%;
+  }
   & tr {
     vertical-align: middle;
     display: table-row;
@@ -94,11 +98,17 @@ table {
       font-weight: bold;
       font-size: medium;
       text-align: center;
+      @media (min-width: 768px) {
+        font-size: large;
+      }
     }
     & td,
     th {
       border: 1px solid #bebebe;
       padding: 10px;
+      @media (min-width: 768px) {
+        font-size: large;
+      }
     }
   }
 }
