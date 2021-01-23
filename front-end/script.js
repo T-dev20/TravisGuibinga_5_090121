@@ -134,10 +134,10 @@ async function productDetails (){
 
 /*Fonction ajouter le produit au panier de l'utilisateur
  *******************************************************/
-function addToBasket(){
+/*function addToBasket(){
 	//Écoute de l'évènement clic du btn pour mettre le produit dans le panier
 		var addProd = document.getElementById("addProductToBasket");
-		var countProd = document.getElementById("prodNumber");
+		//var countProd = document.getElementById("prodNumber");
 		addProd.addEventListener('click', () => {
 			cartCount();
 		})
@@ -158,7 +158,7 @@ function addToBasket(){
 			
 };
 addPanier() ;
-}
+}*/
 
 /*Fonction pour ajout de produit au panier et renvoie de l'historique en Objet Js*/
 function addPanier() {
@@ -229,7 +229,7 @@ function recapProducts() {
         ligneProduct.appendChild(colRemoveProd);
 
 		//Contenu des lignes
-		colRemoveProd.textContent = 'supprimer';
+		colRemoveProd.textContent = 'supprimer'
         nameProduct.innerHTML = product.name;
         priceUnitProduct.textContent = product.price / 100 + " €";
 	});
@@ -256,7 +256,7 @@ function recapProducts() {
 function removeProduct(i) {
 		console.log("Administration : Enlever le produit à l'index " + i);
 		//recupérer le array
-		basketUser.splice(i, 1); 
+		userBasket.splice(i, 1); 
 		console.log("Administration : " + basketUser);
 		//On vide le localstorage
 		localStorage.clear();
