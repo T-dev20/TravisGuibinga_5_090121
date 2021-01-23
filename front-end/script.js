@@ -193,6 +193,39 @@ function recapProducts() {
       firstRowTable.appendChild(columnName);
       columnName.textContent = "Nom du produit";
       firstRowTable.appendChild(columnPriceUnit);
-      columnPriceUnit.textContent = "Prix du produit";
-}
+	  columnPriceUnit.textContent = "Prix du produit";
+	  
+
+	  //Pour chaque produit du panier, on créé une ligne avec le nom et le prix
+      //Initialisation du compteur pour l'incrémentation de l'id des lignes pour chaque produit
+      let i = 0;
+      
+      JSON.parse(localStorage.getItem("basketUser")).forEach((product)=>{
+        //Création de la ligne
+        let ligneProduct = document.createElement("tr");
+        let nameProduct = document.createElement("td");
+        let priceUnitProduct = document.createElement("td");
+        let iconRemoving = document.createElement("i");
+
+        //Attribution des class pour le css
+        ligneProduct.setAttribute("id", "product " + i++);
+        iconRemoving.setAttribute("id", "remove " + i++);
+        iconRemoving.setAttribute('class', "fas fa-trash-alt annulerproduct");
+        //Pour chaque produit on écoute l'évènement clic sur l'icone de la corbeille pour supprimer ce produit
+        //bind permet de garder l'incrementation du i qui représente l'index du panier au moment de l'écoute de l'event
+        //annulerProduit L233
+        iconRemoving.addEventListener('click', removeProduct.bind(i));
+        i++;
+
+        //Insertion des produits sélectionnés dans le tableau
+        facture.appendChild(ligneProduct);
+        ligneProduct.appendChild(nameProduct);
+        ligneProduct.appendChild(priceUnitProduct);
+        ligneProduct.appendChild(iconRemoving);
+
+        //Contenu des lignes
+        nameProduct.innerHTML = product.name;
+        priceUnitProduct.textContent = product.price / 100 + " €";
+    });
+};
 }
