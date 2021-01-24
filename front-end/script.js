@@ -173,6 +173,8 @@ function addPanier() {
   });
   };
 
+/*Page panier
+**********************************************/
 
 function recapProducts() {
 	//On vérifie s'il y a au moins un prduit dans le panier
