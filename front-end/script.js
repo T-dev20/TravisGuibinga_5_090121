@@ -279,3 +279,74 @@ function removeProduct(i) {
 	}
 		
 }*/
+
+/*Formulaire et vérification de l'etat du panier
+*************************************************/
+
+  //vérifie les inputs du formulaire
+  checkInput = () =>{
+    //Controle Regex
+    let checkString = /[a-zA-Z]/;
+    let checkNumber = /[0-9]/;
+    //Source pour vérification email => emailregex.com
+    let checkMail = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/y;
+    let checkSpecialCharacter = /[§!@#$%^&*(),.?":{}|<>]/;
+
+    //message fin de controle
+    let checkMessage = "";
+
+    //Récupération des inputs
+    let formNom = document.getElementById("formNom").value;
+    let formPrenom = document.getElementById("formPrenom").value;
+    let formMail = document.getElementById("formMail").value;
+    let formAdresse = document.getElementById("formAdresse").value;
+    let formVille = document.getElementById("formVille").value;
+
+
+      //tests des différents input du formulaire
+        //Test du nom => aucun chiffre ou charactère spécial permis
+        if(checkNumber.test(formNom) == true || checkSpecialCharacter.test(formNom) == true || formNom == ""){
+        	checkMessage = "Vérifier/renseigner votre nom";
+        }else{
+        	console.log("Administration : Nom ok");
+        };
+        //Test du prénom => aucun chiffre ou charactère spécial permis
+        if(checkNumber.test(formPrenom) == true || checkSpecialCharacter.test(formPrenom) == true || formPrenom == ""){
+        	checkMessage = checkMessage + "\n" + "Vérifier/renseigner votre prénom";
+        }else{
+        	console.log("Administration : Prénom ok");
+        };
+        //Test du mail selon le regex de la source L292
+        if(checkMail.test(formMail) == false){
+        	checkMessage = checkMessage + "\n" + "Vérifier/renseigner votre email";
+        }else{
+        	console.log("Administration : Adresse mail ok");
+        };
+        //Test de l'adresse => l'adresse ne contient pas obligatoirement un numéro de rue mais n'a pas de characteres spéciaux
+        if(checkSpecialCharacter.test(formAdresse) == true || formAdresse == ""){
+        	checkMessage = checkMessage + "\n" + "Vérifier/renseigner votre adresse";
+        }else{
+        	console.log("Administration : Adresse ok");
+        };
+        //Test de la ville => aucune ville en France ne comporte de chiffre ou charactères spéciaux
+        if(checkSpecialCharacter.test(formVille) == true && checkNumber.test(formVille) == true || formVille == ""){
+        	checkMessage = checkMessage + "\n" + "Vérifier/renseigner votre ville"
+        }else{
+        	console.log("Administration : Ville ok")
+        };
+        //Si un des champs n'est pas bon => message d'alert avec la raison
+        if(checkMessage != ""){
+        	alert("Il est nécessaire de :" + "\n" + checkMessage);
+        }
+        //Si tout est ok construction de l'objet contact => a revoir
+        else{
+        	contact = {
+        		firstName : formNom,
+        		lastName : formPrenom,
+        		address : formAdresse,
+        		city : formVille,
+        		email : formMail
+        	};
+        	return contact;
+        };
+    };
