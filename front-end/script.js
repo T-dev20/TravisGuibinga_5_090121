@@ -349,4 +349,9 @@ function removeProduct(i) {
         	};
         	return contact;
         };
-    };
+	};
+	
+	//Vérification du panier
+	function checkBasket() {
+		
+	};
