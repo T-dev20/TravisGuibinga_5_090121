@@ -239,9 +239,9 @@ function recapProducts() {
 		//Dernière ligne du tableau : Total
 		facture.appendChild(rowTotal);
 		rowTotal.appendChild(columnRefTotal);
-		columnRefTotal.textContent = "Total à payer"
+		columnRefTotal.textContent = "Total à payer";
 		rowTotal.appendChild(colPriceTotal);
-		colPriceTotal.setAttribute("id", "sommeTotal")
+		colPriceTotal.setAttribute("id", "sommeTotal");
 
 		//Calcule de la somme totale à régler
 		let totalPaye = 0;
