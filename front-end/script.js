@@ -353,5 +353,6 @@ function removeProduct(i) {
 	
 	//Vérification du panier
 	function checkBasket() {
-		
+		//Vérifier qu'il y ai au moins un produit dans le panier
+  		let statuBasket = JSON.parse(localStorage.getItem("basketUser"));
 	};
