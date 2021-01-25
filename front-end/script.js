@@ -359,7 +359,7 @@ removeProduct = (i) => {
 		if(statuBasket == null){
 			//Si l'utilisateur à supprimer son localStorage statuBasket sur la page basket.html et qu'il continue le process de commande
 			alert("Il y a eu un problème avec votre panier, une action non autorisée a été faite. Veuillez recharger la page pour la corriger");
-			return false
+			return false;
 		}else if(statuBasket.length < 1 || statuBasket == null){
 			console.log("Administration: ERROR => le localStorage ne contient pas de panier")
 			alert("Votre panier est vide");
