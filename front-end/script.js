@@ -391,7 +391,7 @@ removeProduct = (i) => {
           sessionStorage.setItem("order", this.responseText);
 
           //Chargement de la page de confirmation
-          document.forms["form-basket"].action = 'confirm.html';
+          document.forms["form-basket"].action = './confirm.html';
           document.forms["form-basket"].submit();
 
           resolve(JSON.parse(this.responseText));
@@ -429,7 +429,7 @@ validForm = () =>{
      localStorage.clear();
  }else{
  	console.log("Administration : ERROR");
- };
+ }
 });
 };
 
@@ -448,6 +448,6 @@ resultOrder = () =>{
 }else{
   //avertissement et redirection vers l'accueil
   alert("Aucune commande passée, vous êtes arrivé ici par erreur");
-  window.open("index.html");
+  window.open("./index.html");
 }
 }
