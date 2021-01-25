@@ -8,6 +8,26 @@ const APIURL = "http://localhost:3000/api/" + productSelect + "/";
 
 let idProduct = "";
 
+
+/*L'utilisateur a besoin d'un panier dans le localStorage de son navigateur
+On vérifie que le panier existe dans le localStorage, sinon on le crée et on l'envoie dans 
+le localStorage au premier chargement du site quelque soit la page*/
+
+if(localStorage.getItem("basketUser")){
+	console.log("Administration : Panier présent dans le localStorage");
+}else{
+	console.log("Administration : Panier non présent dans le localStorage. Créons-le!");
+	let basketInit = [];
+	localStorage.setItem("basketUser", JSON.stringify(basketInit));
+};
+
+//Tableau et objet demandé par l'API pour la commande
+  	let contact;
+	let productToAPI = [];
+	  
+//Récupération du panier et transformation des données en object Js 
+	let userBasket = JSON.parse(localStorage.getItem("basketUser"));
+
 /*Appel de l'API
 **********************************************/
 
@@ -87,25 +107,6 @@ provideProducts = () =>{
 			productLink.textContent = "Voir le produit";
 		});
 };
-
-/*L'utilisateur à besoin d'un panier dans le localStorage de son navigateur
-On vérifie que le panier existe dans le localStorage, sinon on le crée et on l'envoie dans 
-le localStorage au premier chargement du site quelque soit la page*/
-
-if(localStorage.getItem("basketUser")){
-	console.log("Administration : Panier présent dans le localStorage");
-}else{
-	console.log("Administration : Panier non présent dans le localStorage. Créons-le!");
-	let basketInit = [];
-	localStorage.setItem("basketUser", JSON.stringify(basketInit));
-};
-
-//Tableau et objet demandé par l'API pour la commande
-  	let contact;
-	let productToAPI = [];
-	  
-//Récupération du panier et transformation des données en object Js 
-	let userBasket = JSON.parse(localStorage.getItem("basketUser"));
 
 
 /*Affichage de la page produit, avec présentation
