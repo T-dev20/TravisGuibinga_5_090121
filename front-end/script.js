@@ -187,7 +187,7 @@ function prodNumbers() {
 
 recapProducts = () =>{
 	//On vérifie s'il y a au moins un prduit dans le panier
-    if(JSON.parse(localStorage.getItem("basketUser")).length > 0){
+    if(userBasket.length > 0){
       //S'il n'est pas vide on supprime le message et on créé le tableau récapitulatif
       document.getElementById("emptyBasket").remove();
 
@@ -211,40 +211,43 @@ recapProducts = () =>{
 	  columnPriceUnit.textContent = "Prix du produit";
 	  
 
-	  //Pour chaque produit du panier, on créé une ligne avec le nom et le prix
-      //Initialisation du compteur pour l'incrémentation de l'id des lignes pour chaque produit
-      let i = 0;
-      
-      JSON.parse(localStorage.getItem("basketUser")).forEach((product)=>{
-        //Création de la ligne
-        let ligneProduct = document.createElement("tr");
+	  //Boucle FOR pour affichage des articles dans le panier
+     
+      for (let i = 0; i<userBasket.length; i++) {
+    
+      //Création des lignes du tableau
+
+      	let ligneProduct = document.createElement("tr");
         let nameProduct = document.createElement("td");
         let priceUnitProduct = document.createElement("td");
-		// let colRemoveProd = document.createElement("i");
-		let colRemoveProd = document.createElement("button");
+		let colRemoveProd = document.createElement("i");
+		//let colRemoveProd = document.createElement("button");
 
-        //Attribution des class pour le css
-        ligneProduct.setAttribute("id", "product"+i);
-        colRemoveProd.setAttribute("id", "remove"+i);
-        // colRemoveProd.setAttribute('class', "fas fa-trash-alt annulerproduct");
-        //Pour chaque produit on écoute l'évènement clic sur l'icone de la corbeille pour supprimer ce produit
-        //bind permet de garder l'incrementation du i qui représente l'index du panier au moment de l'écoute de l'event
-        //removeProduct => L259
-        colRemoveProd.addEventListener('click', removeProduct.bind(i));
-        i++;
+		//Attribution des class ou Id
+		ligneProduct.setAttribute("id", "product"+[i]);
+		colRemoveProd.setAttribute("id", "remove"+i);
+		colRemoveProd.setAttribute("class", "fas fa-times-circle fa-1x");
 
-        //Insertion des produits sélectionnés dans le tableau
+		console.log(i);
+		
+		//Supprimer un produit du panier
+		colRemoveProd.addEventListener("click", (event) => {this.removeProduct(i);})
+   
+       //Insertion des produits sélectionnés dans le tableau
         facture.appendChild(ligneProduct);
         ligneProduct.appendChild(nameProduct);
         ligneProduct.appendChild(priceUnitProduct);
         ligneProduct.appendChild(colRemoveProd);
 
 		//Contenu des lignes
-		colRemoveProd.textContent = 'supprimer';
-        nameProduct.innerHTML = product.name;
-        priceUnitProduct.textContent = product.price / 100 + " €";
-	});
-	
+		//colRemoveProd.textContent = 'supprimer';
+        nameProduct.textContent = userBasket[i].name;
+		priceUnitProduct.textContent = userBasket[i].price / 100 + " €";
+		console.log(userBasket[i].name);
+
+	};
+
+
 		//Dernière ligne du tableau : Total
 		facture.appendChild(rowTotal);
 		rowTotal.appendChild(columnRefTotal);
@@ -261,8 +264,8 @@ recapProducts = () =>{
 		//Affichage du prix total à régler
 		console.log("Administration : " + totalPaye);
 		document.getElementById("sommeTotal").textContent = totalPaye + " €";
+}	
 };
-}
 
 removeProduct = (i) => {
 		//recupérer le array
@@ -274,6 +277,8 @@ removeProduct = (i) => {
 		console.log("Administration : localStorage mis à jour");
 		//Mise à jour de la page pour affichage de la suppression au client
 		window.location.reload();
+
+
 };
 
 
