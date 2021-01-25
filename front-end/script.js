@@ -162,7 +162,7 @@ addPanier() ;
 }*/
 
 /*Fonction pour ajout de produit au panier et renvoie de l'historique en Objet Js*/
-function addPanier() {
+addPanier = () => {
   	//Au clic de l'user pour mettre le produit dans le panier
   	let inputBuy = document.getElementById("addProductToBasket");
   	inputBuy.addEventListener("click", async function() {
