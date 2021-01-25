@@ -176,7 +176,7 @@ function addPanier() {
 /*Page panier
 **********************************************/
 
-function recapProducts() {
+recapProducts = () =>{
 	//On vérifie s'il y a au moins un prduit dans le panier
     if(JSON.parse(localStorage.getItem("basketUser")).length > 0){
       //S'il n'est pas vide on supprime le message et on créé le tableau récapitulatif
@@ -353,7 +353,7 @@ removeProduct = (i) => {
 	};
 	
 	//Vérification du panier
-	function checkBasket() {
+	checkBasket = () => {
 		//Vérifier qu'il y ai au moins un produit dans le panier
 		let statuBasket = JSON.parse(localStorage.getItem("basketUser"));
 		//Si le panier est vide ou null (suppression localStorage par)=>alerte
