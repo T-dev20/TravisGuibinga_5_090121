@@ -111,6 +111,9 @@
   display: flex;
   flex-direction: column-reverse;
   margin-top: -5px;
+  @media (min-width: 768px) {
+    margin-top: -8px;
+  }
   & .countProd {
     font-size: 1.2rem;
     text-align: center;
