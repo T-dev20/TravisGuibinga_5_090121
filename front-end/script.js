@@ -186,8 +186,10 @@ function prodNumbers() {
 **********************************************/
 
 recapProducts = () =>{
+	
 	//On vérifie s'il y a au moins un prduit dans le panier
     if(userBasket.length > 0){
+	
       //S'il n'est pas vide on supprime le message et on créé le tableau récapitulatif
       document.getElementById("emptyBasket").remove();
 
@@ -220,18 +222,19 @@ recapProducts = () =>{
       	let ligneProduct = document.createElement("tr");
         let nameProduct = document.createElement("td");
         let priceUnitProduct = document.createElement("td");
-		let colRemoveProd = document.createElement("i");
+		let colRemoveProd = document.createElement("p");
 		//let colRemoveProd = document.createElement("button");
 
 		//Attribution des class ou Id
 		ligneProduct.setAttribute("id", "product"+[i]);
-		colRemoveProd.setAttribute("id", "remove"+i);
-		colRemoveProd.setAttribute("class", "fas fa-times-circle fa-1x suppression");
+		colRemoveProd.setAttribute("class", "suppression");
+		colRemoveProd.innerHTML = 'supprimer';
+		
 
 		console.log(i);
 		
 		//Supprimer un produit du panier
-		colRemoveProd.addEventListener("click", (event) => {this.removeProduct(i);})
+		colRemoveProd.addEventListener("click", (event) => {removeProduct(i);})
    
        //Insertion des produits sélectionnés dans le tableau
         facture.appendChild(ligneProduct);
@@ -268,6 +271,7 @@ recapProducts = () =>{
 };
 
 removeProduct = (i) => {
+	console.log('i', i);
 		//recupérer le array
 		userBasket.splice(i, 1); 
 		//On vide le localstorage
