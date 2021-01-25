@@ -380,7 +380,7 @@ removeProduct = (i) => {
 **********************************************/
 
   //Fonction requête post de l'API
-  envoiDonnees = (objetRequest) => {
+  sendData = (objetRequest) => {
   	return new Promise((resolve)=>{
   		let request = new XMLHttpRequest();
   		request.onreadystatechange = function() {
@@ -400,4 +400,34 @@ removeProduct = (i) => {
   request.setRequestHeader("Content-Type", "application/json");
   request.send(objetRequest);
 });
-  };
+};
+
+//Au click sur le btn de validation du formulaire
+validForm = () =>{
+    //Ecoute de l'event click du formulaire
+    let btnForm = document.getElementById("envoiPost");
+    btnForm.addEventListener("click", function(){
+      //Lancement des verifications du panier et du form => si Ok envoi
+      if(checkBasket() == true && checkInput() != null){
+      	console.log("Administration : L'envoi peut être fait");
+      //Création de l'objet à envoyer
+      let objet = {
+      	contact,
+      	products
+      };
+      console.log("Administration : " + objet);
+     //Conversion en JSON
+     let objetRequest = JSON.stringify(objet);
+     console.log("Administration : " + objetRequest);
+     //Envoi de l'objet via la function
+     sendData(objetRequest);
+
+     //Une fois la commande faite retour à l'état initial des tableaux/objet/localStorage
+     contact = {};
+     productToAPI = [];
+     localStorage.clear();
+ }else{
+ 	console.log("Administration : ERROR");
+ };
+});
+};
