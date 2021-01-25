@@ -174,6 +174,12 @@ addPanier = () => {
   });
   };
 
+
+function prodNumbers() {
+  let prodNumber = document.getElementById("prodNumber");
+  prodNumber.textContent = userBasket.length;
+}
+
 /*Page panier
 **********************************************/
 
