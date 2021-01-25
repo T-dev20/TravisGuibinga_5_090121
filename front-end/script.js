@@ -308,31 +308,31 @@ removeProduct = (i) => {
       //tests des différents input du formulaire
         //Test du nom => aucun chiffre ou charactère spécial permis
         if(checkNumber.test(formNom) == true || checkSpecialCharacter.test(formNom) == true || formNom == ""){
-        	checkMessage = "Vérifier/renseigner votre nom";
+        	checkMessage = "Vérifier/renseigner votre nom. Les caractères spéciaux et les chiffres ne sont pas autorisés";
         }else{
         	console.log("Administration : Nom ok");
         };
         //Test du prénom => aucun chiffre ou charactère spécial permis
         if(checkNumber.test(formPrenom) == true || checkSpecialCharacter.test(formPrenom) == true || formPrenom == ""){
-        	checkMessage = checkMessage + "\n" + "Vérifier/renseigner votre prénom";
+        	checkMessage = checkMessage + "\n" + "Vérifier/renseigner votre prénom. Les caractères spéciaux et les chiffres ne sont pas autorisés";
         }else{
         	console.log("Administration : Prénom ok");
         };
         //Test du mail selon le regex de la source L292
         if(checkMail.test(formMail) == false){
-        	checkMessage = checkMessage + "\n" + "Vérifier/renseigner votre email";
+        	checkMessage = checkMessage + "\n" + "Vérifier/renseigner votre email. Les caractères spéciaux ne sont pas autorisés";
         }else{
         	console.log("Administration : Adresse mail ok");
         };
         //Test de l'adresse => l'adresse ne contient pas obligatoirement un numéro de rue mais n'a pas de characteres spéciaux
         if(checkSpecialCharacter.test(formAdresse) == true || formAdresse == ""){
-        	checkMessage = checkMessage + "\n" + "Vérifier/renseigner votre adresse";
+        	checkMessage = checkMessage + "\n" + "Vérifier/renseigner votre adresse. Les caractères spéciaux ne sont pas autorisés";
         }else{
         	console.log("Administration : Adresse ok");
         };
         //Test de la ville => aucune ville en France ne comporte de chiffre ou charactères spéciaux
         if(checkSpecialCharacter.test(formVille) == true && checkNumber.test(formVille) == true || formVille == ""){
-        	checkMessage = checkMessage + "\n" + "Vérifier/renseigner votre ville"
+        	checkMessage = checkMessage + "\n" + "Vérifier/renseigner votre ville. Les caractères spéciaux ou les chiffres ne sont pas autorisés"
         }else{
         	console.log("Administration : Ville ok")
         };
@@ -340,7 +340,7 @@ removeProduct = (i) => {
         if(checkMessage != ""){
         	alert("Il est nécessaire de :" + "\n" + checkMessage);
         }
-        //Si tout est ok construction de l'objet contact => a revoir
+        //Si le formulaire est validé => construction de l'objet contact
         else{
         	contact = {
         		firstName : formNom,
