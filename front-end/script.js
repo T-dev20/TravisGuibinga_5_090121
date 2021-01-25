@@ -255,7 +255,7 @@ function recapProducts() {
 };
 }
 
-function removeProduct(i) {
+removeProduct = (i) => {
 		console.log("Administration : Enlever le produit à l'index " + i);
 		//recupérer le array
 		userBasket.splice(i, 1); 
@@ -268,8 +268,7 @@ function removeProduct(i) {
 		console.log("Administration : localStorage mis à jour");
 		//relancer la création de la foncton recapProducts
 		window.location.reload();
-		return
-}
+};
 
 /*function removeProduct(name) {
 	var basket = JSON.parse(localStorage.getItem("basketUser")).length;
