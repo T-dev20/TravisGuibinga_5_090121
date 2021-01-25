@@ -221,7 +221,7 @@ recapProducts = () =>{
         // colRemoveProd.setAttribute('class', "fas fa-trash-alt annulerproduct");
         //Pour chaque produit on écoute l'évènement clic sur l'icone de la corbeille pour supprimer ce produit
         //bind permet de garder l'incrementation du i qui représente l'index du panier au moment de l'écoute de l'event
-        //removeProduct => L249
+        //removeProduct => L259
         colRemoveProd.addEventListener('click', removeProduct.bind(i));
         i++;
 
@@ -240,9 +240,9 @@ recapProducts = () =>{
 		//Dernière ligne du tableau : Total
 		facture.appendChild(rowTotal);
 		rowTotal.appendChild(columnRefTotal);
-		columnRefTotal.textContent = "Total à payer";
+		columnRefTotal.textContent = "Total à payer"
 		rowTotal.appendChild(colPriceTotal);
-		colPriceTotal.setAttribute("id", "sommeTotal");
+		colPriceTotal.setAttribute("id", "sommeTotal")
 
 		//Calcule de la somme totale à régler
 		let totalPaye = 0;
@@ -271,16 +271,6 @@ removeProduct = (i) => {
 		window.location.reload();
 };
 
-/*function removeProduct(name) {
-	var basket = JSON.parse(localStorage.getItem("basketUser")).length;
-	for (let i = 0; i < basket; i+= 1) {
-		if (basket[i].name === name) {
-			basket.splice(i, 1)
-			return name;
-		}
-	}
-		
-}*/
 
 /*Formulaire et vérification de l'etat du panier
 *************************************************/
@@ -391,8 +381,8 @@ removeProduct = (i) => {
           sessionStorage.setItem("order", this.responseText);
 
           //Chargement de la page de confirmation
-          document.forms["form-panier"].action = 'confirm.html';
-          document.forms["form-panier"].submit();
+          document.forms["form-basket"].action = 'confirm.html';
+          document.forms["form-basket"].submit();
 
           resolve(JSON.parse(this.responseText));
       }
