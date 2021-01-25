@@ -170,14 +170,16 @@ addPanier = () => {
   	//Récupération du panier dans le localStorage et ajout du produit dans le panier avant revoit dans le localStorage
   	userBasket.push(prod);
   	localStorage.setItem("basketUser", JSON.stringify(userBasket));
-  	console.log("Administration : le produit a été ajouté au panier");
+	console.log("Administration : le produit a été ajouté au panier");
+	alert("Cet article a été ajouté dans votre panier");
+    location.reload();
   });
   };
 
 
 function prodNumbers() {
   let prodNumber = document.getElementById("prodNumber");
-  prodNumber.textContent = userBasket.length;
+  prodNumber.innerHTML = userBasket.length;
 }
 
 /*Page panier
