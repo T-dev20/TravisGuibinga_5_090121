@@ -226,7 +226,7 @@ recapProducts = () =>{
 		//Attribution des class ou Id
 		ligneProduct.setAttribute("id", "product"+[i]);
 		colRemoveProd.setAttribute("id", "remove"+i);
-		colRemoveProd.setAttribute("class", "fas fa-times-circle fa-1x");
+		colRemoveProd.setAttribute("class", "fas fa-times-circle fa-1x suppression");
 
 		console.log(i);
 		
