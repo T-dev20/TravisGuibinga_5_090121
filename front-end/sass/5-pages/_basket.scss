@@ -112,10 +112,6 @@ table {
     }
   }
 }
-#remove0 {
-  display: block;
-  cursor: pointer;
-}
 
 .suppression {
   color: #e0532c;
@@ -124,4 +120,9 @@ table {
   margin-top: 10px;
   margin-left: 10px;
   cursor: pointer;
+}
+#emptyBasket {
+  @media (min-width: 1024px) {
+    margin-top: 6rem;
+  }
 }
