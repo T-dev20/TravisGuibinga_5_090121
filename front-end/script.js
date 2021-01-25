@@ -130,7 +130,7 @@ async function productDetails (){
     		let optionProduct = document.createElement("option");
     		document.getElementById("optionSelect").appendChild(optionProduct).innerHTML = product;
     	});
-}
+};
 
 
 /*Fonction ajouter le produit au panier de l'utilisateur
