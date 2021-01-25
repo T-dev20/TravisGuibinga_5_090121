@@ -277,8 +277,6 @@ removeProduct = (i) => {
 		console.log("Administration : localStorage mis à jour");
 		//Mise à jour de la page pour affichage de la suppression au client
 		window.location.reload();
-
-
 };
 
 
