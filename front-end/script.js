@@ -265,17 +265,14 @@ recapProducts = () =>{
 }
 
 removeProduct = (i) => {
-		console.log("Administration : Enlever le produit à l'index " + i);
 		//recupérer le array
 		userBasket.splice(i, 1); 
-		console.log("Administration : " + basketUser);
 		//On vide le localstorage
 		localStorage.clear();
-		console.log("Administration : localStorage vidé");
 		//mettre à jour le localStorage avec le nouveau panier
 		localStorage.setItem('basketUser', JSON.stringify(userBasket));
 		console.log("Administration : localStorage mis à jour");
-		//relancer la création de la foncton recapProducts
+		//Mise à jour de la page pour affichage de la suppression au client
 		window.location.reload();
 };
 
