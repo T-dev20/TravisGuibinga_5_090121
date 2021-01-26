@@ -204,7 +204,7 @@ recapProducts = () =>{
 
 		console.log(i);
 		
-		//Supprimer un produit du panier
+		//Supprimer un produit du panier. removeProduct => L244
 		colRemoveProd.addEventListener("click", (event) => {removeProduct(i);})
    
        //Insertion des produits sélectionnés dans le tableau
