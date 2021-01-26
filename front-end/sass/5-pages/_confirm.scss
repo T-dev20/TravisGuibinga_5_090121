@@ -12,9 +12,10 @@
   margin: 40px auto;
   text-align: center;
   & .fa-check {
-    border: 5px solid black;
-    color: #e0532c;
+    border: 5px solid rgb(176, 109, 161);
+    color: rgb(176, 109, 161);
     font-size: 25px;
     border-radius: 100%;
+    padding: 5px;
   }
 }
