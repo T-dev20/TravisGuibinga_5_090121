@@ -379,7 +379,8 @@ removeProduct = (i) => {
 		}
 	};
 
-/*Envoi du formulaire
+
+/*Envoi du formulaire à l'API
 **********************************************/
 
   //Fonction requête post de l'API
