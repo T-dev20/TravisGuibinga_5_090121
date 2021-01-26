@@ -21,9 +21,6 @@ if(localStorage.getItem("basketUser")){
 	localStorage.setItem("basketUser", JSON.stringify(basketInit));
 };
 
-//Tableau et objet demandé par l'API pour la commande
-  	let contact;
-	let productToAPI = [];
 	  
 //Récupération du panier et transformation des données en object Js 
 	let userBasket = JSON.parse(localStorage.getItem("basketUser"));
@@ -370,6 +367,10 @@ checkBasket = () => {
 	}
 };
 
+
+//Tableau et objet demandé par l'API pour la commande
+let contact;
+let productToAPI = [];
 
 /*Envoi du formulaire à l'API
 **********************************************/
