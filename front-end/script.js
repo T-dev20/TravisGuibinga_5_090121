@@ -373,7 +373,7 @@ const sendData = (sendForm, url) => {
 //Au click sur le btn de validation du formulaire
 validForm = () =>{
     //Ecoute de l'event click du formulaire
-    let btnForm = document.getElementById("envoiPost");
+    let btnForm = document.getElementById("formBasket");
     btnForm.addEventListener("submit", (event) => {
 	event.preventDefault()
 	//Lancement des verifications du panier et du formulaire => si Ok envoi à l'API
