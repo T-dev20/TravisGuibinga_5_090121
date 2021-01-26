@@ -177,6 +177,8 @@ addPanier = () => {
   };
 
 
+/*Fonction d'affichage du nbre de poduits sur l'icon du panier
+**************************************************************/
 function prodNumbers() {
   let prodNumber = document.getElementById("prodNumber");
   prodNumber.innerHTML = userBasket.length;
