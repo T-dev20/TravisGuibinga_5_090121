@@ -130,34 +130,6 @@ async function productDetails (){
 };
 
 
-/*Fonction ajouter le produit au panier de l'utilisateur
- *******************************************************/
-/*function addToBasket(){
-	//Écoute de l'évènement clic du btn pour mettre le produit dans le panier
-		var addProd = document.getElementById("addProductToBasket");
-		//var countProd = document.getElementById("prodNumber");
-		addProd.addEventListener('click', () => {
-			cartCount();
-		})
-
-	function cartCount(){
-			let prdCount = localStorage.getItem('counterNum');
-			//valeur du conterNum passé en type 'Number'  
-			prdCount = parseInt(prdCount);
-			//Si la valeur de prdCount existe,alors on ajoute 1 dans le localStorage et le compteur visible
-			//sinon on crée un paire clé/valeur initialisée à 1
-			if(prdCount){
-				localStorage.setItem('counterNum', prdCount + 1);
-				countProd.textContent = prdCount + 1;
-			}else{
-				localStorage.setItem('counterNum', 1);
-				countProd.textContent = prdCount = 1;
-			}
-			
-};
-addPanier() ;
-}*/
-
 /*Fonction pour ajout de produit au panier et renvoie de l'historique en Objet Js*/
 addPanier = () => {
   	//Au clic de l'user pour mettre le produit dans le panier
