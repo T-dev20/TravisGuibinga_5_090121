@@ -5,3 +5,15 @@
 .order-confirm__topbar__logo {
   width: 80%;
 }
+
+.order-confirm__card {
+  //   background-color: aqua;
+  margin: auto;
+  text-align: center;
+  & .fa-check {
+    border: 5px solid black;
+    color: #e0532c;
+    font-size: 25px;
+    border-radius: 100%;
+  }
+}
