@@ -377,8 +377,8 @@ let productToAPI = [];
 let url = "http://localhost:3000/api/furniture/order";
 
 
-  //Fonction requête post de l'API
-const sendData = (objetRequest) => {
+//Fonction requête post de l'API
+const sendData = (objetRequest, url) => {
   	return new Promise((resolve)=>{
   		let request = new XMLHttpRequest();
   		request.onload = function() {
@@ -388,11 +388,13 @@ const sendData = (objetRequest) => {
 				window.location = "./confirm.html";
 				resolve(JSON.parse(this.responseText));
 				console.log(objetRequest);
+      }else {
       }
   };
-  request.open("POST", APIURL + "order");
+  request.open("POST", url);
   request.setRequestHeader("Content-Type", "application/json");
   request.send(objetRequest);
+  console.log(objetRequest);
 });
 };
 
@@ -418,7 +420,7 @@ validForm = () =>{
 	console.log("Administration : " + objet);
 	//Conversion de l'objet "objet" en string, puis envoie.
 	let sendForm = JSON.stringify(objet);
-    sendData(sendForm);
+    sendData(sendForm, url);
     console.log(objet);
 
       //Une fois la commande effectuée retour à l'état initial des tableaux/objet/localStorage
