@@ -355,29 +355,20 @@ removeProduct = (i) => {
         }
 	};
 	
-	//Vérification du panier
-	checkBasket = () => {
-		//Vérifier qu'il y ai au moins un produit dans le panier
-		let statuBasket = JSON.parse(localStorage.getItem("basketUser"));
-		//Si le panier est vide ou null (suppression localStorage par)=>alerte
-		if(statuBasket == null){
-			//Si l'utilisateur à supprimer son localStorage statuBasket sur la page basket.html et qu'il continue le process de commande
-			alert("Il y a eu un problème avec votre panier, une action non autorisée a été faite. Veuillez recharger la page pour la corriger");
-			return false;
-		}else if(statuBasket.length < 1 || statuBasket == null){
-			console.log("Administration: ERROR => le localStorage ne contient pas de panier")
-			alert("Votre panier est vide");
-			return false;
-		}else{
-			console.log("Administration : Le panier n'est pas vide")
-			//Si le panier n'est pas vide on rempli le productToAPI(L105) envoyé à l'API
-			JSON.parse(localStorage.getItem("basketUser")).forEach((product) =>{
-				productToAPI.push(product._id);
-			});
-			console.log("Administration : Le tableau "+ productToAPI + " sera envoyé à l'API")
-			return true;
-		}
-	};
+
+//Vérification du panier
+checkBasket = () => {
+	//Vérifier qu'il y ai au moins un produit dans le panier
+	let basketStatut = JSON.parse(localStorage.getItem("basketUser"));
+	//Si le panier est vide ou null
+	if  (basketStatut.length < 1 || basketStatut == null) {
+		alert("Votre panier est vide");
+		return false;
+	} else {
+		console.log("Le panier n'est pas vide");
+		return true;
+	}
+};
 
 
 /*Envoi du formulaire à l'API
