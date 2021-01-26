@@ -409,30 +409,35 @@ removeProduct = (i) => {
 validForm = () =>{
     //Ecoute de l'event click du formulaire
     let btnForm = document.getElementById("envoiPost");
-    btnForm.addEventListener("click", function(){
-      //Lancement des verifications du panier et du form => si Ok envoi
-      if(checkBasket() == true && checkInput() != null){
-      	console.log("Administration : L'envoi peut être fait");
-      //Création de l'objet à envoyer
-      let objet = {
-      	contact,
-      	products
-      };
-      console.log("Administration : " + objet);
-     //Conversion en JSON
-     let objetRequest = JSON.stringify(objet);
-     console.log("Administration : " + objetRequest);
-     //Envoi de l'objet via la function
-     sendData(objetRequest);
+    btnForm.addEventListener("submit", (event) => {
+	event.preventDefault()
+	//Lancement des verifications du panier et du formulaire => si Ok envoi à l'API
+	if(checkBasket() == true && checkInput() != null){
+	console.log("Administration : L'envoi peut être fait");
+	userBasket.forEach((product) => {
+        productToAPI.push(product._id);
+      });
+	  console.log("Ce tableau sera envoyé à l'API : " + productToAPI);
+	  
+	//Création de l'objet à envoyer
+	let objet = {
+	contact,
+	products
+	};
+	console.log("Administration : " + objet);
+	//Conversion de l'objet "objet" en string
+	let sendForm = JSON.stringify(objet);
+      envoiFormulaire(sendForm, url);
+      console.log(sendForm);
 
-     //Une fois la commande faite retour à l'état initial des tableaux/objet/localStorage
-     contact = {};
-     productToAPI = [];
-     localStorage.clear();
- }else{
- 	console.log("Administration : ERROR");
- }
-});
+      //Une fois la commande effectuée retour à l'état initial des tableaux/objet/localStorage
+      contact = {};
+      productToAPI = [];
+      localStorage.clear();
+    } else {
+      console.log("ERROR");
+    }
+  });
 };
 
 /*Affichage des informations sur la page de confirmation
