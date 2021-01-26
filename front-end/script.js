@@ -371,6 +371,7 @@ checkBasket = () => {
 //Tableau et objet demandé par l'API pour la commande
 let contact;
 let productToAPI = [];
+let url = "http://localhost:3000/api/furniture/order";
 
 /*Envoi du formulaire à l'API
 **********************************************/
