@@ -384,20 +384,16 @@ removeProduct = (i) => {
 **********************************************/
 
   //Fonction requête post de l'API
-  sendData = (objetRequest) => {
+const sendData = (objetRequest) => {
   	return new Promise((resolve)=>{
   		let request = new XMLHttpRequest();
-  		request.onreadystatechange = function() {
-  			if(this.readyState == XMLHttpRequest.DONE && this.status == 201) 
-  			{
-          //Sauvegarde du retour de l'API dans la sessionStorage pour affichage dans confirm.html
-          sessionStorage.setItem("order", this.responseText);
-
-          //Chargement de la page de confirmation
-          document.forms["form-basket"].action = './confirm.html';
-          document.forms["form-basket"].submit();
-
-          resolve(JSON.parse(this.responseText));
+  		request.onload = function() {
+  			if(this.readyState == XMLHttpRequest.DONE && this.status == 201){
+         	    //Sauvegarde du retour de l'API dans la sessionStorage pour affichage dans confirm.html
+				sessionStorage.setItem("order", this.responseText);
+				window.location = "./confirm.html";
+				resolve(JSON.parse(this.responseText));
+				console.log(objetRequest);
       }
   };
   request.open("POST", APIURL + "order");
