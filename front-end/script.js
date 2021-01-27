@@ -461,5 +461,9 @@ recapCommande = () => {
 		facture.appendChild(ligneProduct);
 		facture.appendChild(nameProduct);
 		facture.appendChild(priceUnitProduct);
+
+		//Contenu des lignes
+		nameProduct.textContent = orderArticle.name;
+		priceUnitProduct.textContent = orderArticle.price / 100 + " €";
 	  });
 }
