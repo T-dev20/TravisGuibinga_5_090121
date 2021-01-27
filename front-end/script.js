@@ -437,7 +437,7 @@ recapCommande = () => {
       let colPriceTotal = document.createElement("td");
 
       //Placement de la structure du tableau dans la page panier
-      let factureSection = document.getElementById("basket-resume");
+      let factureSection = document.getElementById("confirmation-recap");
       factureSection.appendChild(facture);
       facture.appendChild(firstRowTable);
       firstRowTable.appendChild(columnName);
