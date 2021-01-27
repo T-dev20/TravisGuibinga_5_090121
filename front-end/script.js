@@ -444,4 +444,8 @@ recapCommande = () => {
       columnName.textContent = "Nom du produit";
       firstRowTable.appendChild(columnPriceUnit);
 	  columnPriceUnit.textContent = "Prix du produit";
+
+	  //Incrémentation de l'id des lignes pour chaque produit
+	  let i = 0;
+	  let order = JSON.parse(sessionStorage.getItem("order"));
 }
