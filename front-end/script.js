@@ -448,4 +448,13 @@ recapCommande = () => {
 	  //Incrémentation de l'id des lignes pour chaque produit
 	  let i = 0;
 	  let order = JSON.parse(sessionStorage.getItem("order"));
+
+	  order.products.forEach((orderArticle)=> {
+		let ligneProduct = document.createElement("tr");
+        let nameProduct = document.createElement("td");
+        let priceUnitProduct = document.createElement("td");
+
+		//Attribution des class ou Id
+		ligneProduct.setAttribute("id", "article_acheté"+i);
+	  });
 }
