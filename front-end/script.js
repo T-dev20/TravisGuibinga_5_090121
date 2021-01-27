@@ -466,4 +466,21 @@ recapCommande = () => {
 		nameProduct.textContent = orderArticle.name;
 		priceUnitProduct.textContent = orderArticle.price / 100 + " €";
 	  });
-}
+
+	  //Dernière ligne du tableau : Total
+		facture.appendChild(rowTotal);
+		rowTotal.appendChild(columnRefTotal);
+		columnRefTotal.textContent = "Total payé"
+		rowTotal.appendChild(colPriceTotal);
+		colPriceTotal.setAttribute("id", "sommeConfirmTotal")
+
+		//Calcule de la somme totale réglée
+		let totalConfirmPaye = 0;
+		order.products.forEach((product)=>{
+			totalConfirmPaye += product.price / 100;
+		});
+
+		//Affichage du prix total réglé
+		console.log("Administration : " + totalConfirmPaye);
+		document.getElementById("sommeConfirmTotal").textContent = totalConfirmPaye + " €";
+};
