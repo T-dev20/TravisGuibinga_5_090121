@@ -423,3 +423,25 @@ resultOrder = () =>{
   window.location = "./index.html";
 }
 };
+
+
+recapCommande = () => {
+	//Création de la structure principale du tableau  
+      let facture = document.createElement("table");
+      let firstRowTable = document.createElement("tr");
+      let columnName = document.createElement("th");
+	  let columnPriceUnit = document.createElement("th");
+	 // let columnRemove = document.createElement("td");
+      let rowTotal = document.createElement("tr");
+      let columnRefTotal = document.createElement("th");
+      let colPriceTotal = document.createElement("td");
+
+      //Placement de la structure du tableau dans la page panier
+      let factureSection = document.getElementById("basket-resume");
+      factureSection.appendChild(facture);
+      facture.appendChild(firstRowTable);
+      firstRowTable.appendChild(columnName);
+      columnName.textContent = "Nom du produit";
+      firstRowTable.appendChild(columnPriceUnit);
+	  columnPriceUnit.textContent = "Prix du produit";
+}
