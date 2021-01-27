@@ -357,7 +357,7 @@ const sendData = (sendForm, url) => {
   			if(this.readyState == XMLHttpRequest.DONE && this.status == 201){
          	    //Sauvegarde du retour de l'API dans la sessionStorage pour affichage dans confirm.html
 				sessionStorage.setItem("order", this.responseText);
-				window.location = "confirm.html";
+				window.location = "./confirm.html";
 				resolve(JSON.parse(this.responseText));
 				console.log(sendForm);
       }else {
@@ -420,6 +420,6 @@ resultOrder = () =>{
 }else{
   //avertissement et redirection vers l'accueil
   alert("Aucune commande passée, vous êtes arrivé ici par erreur");
-  window.location = "index.html";
+  window.location = "./index.html";
 }
 };
