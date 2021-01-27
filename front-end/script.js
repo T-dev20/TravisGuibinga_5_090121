@@ -456,5 +456,10 @@ recapCommande = () => {
 
 		//Attribution des class ou Id
 		ligneProduct.setAttribute("id", "article_acheté"+i);
+
+		//Insertion dans le HTML
+		facture.appendChild(ligneProduct);
+		facture.appendChild(nameProduct);
+		facture.appendChild(priceUnitProduct);
 	  });
 }
