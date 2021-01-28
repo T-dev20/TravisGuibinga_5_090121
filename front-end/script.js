@@ -350,7 +350,16 @@ let url = "http://localhost:3000/api/furniture/order";
 
 
 //Fonction requête post de l'API
-sendData = () => {
+const sendData = () => {
+	//Création de l'objet à envoyer
+	let objet = {
+	contact,
+	productToAPI,
+	};
+	console.log("Administration : " + objet);
+	//Conversion de l'objet "objet" en string, puis envoie.
+	var formSend = JSON.stringify(objet);
+    console.log(objet);
   	return new Promise((resolve)=>{
   		let request = new XMLHttpRequest();
   		request.onload = function() {
@@ -364,7 +373,7 @@ sendData = () => {
   };
   request.open("POST", url);
   request.setRequestHeader("Content-Type", "application/json");
-  request.send();
+  request.send(formSend);
 });
 };
 
@@ -382,17 +391,7 @@ validForm = () =>{
       });
 	  console.log("Ce tableau sera envoyé à l'API : " + productToAPI);
 	  
-	//Création de l'objet à envoyer
-	let objet = {
-	contact,
-	productToAPI,
-	};
-	console.log("Administration : " + objet);
-	//Conversion de l'objet "objet" en string, puis envoie.
-	let sendForm = JSON.stringify(objet);
-    sendData(sendForm, url);
-    console.log(objet);
-
+	  sendData();
       //Une fois la commande effectuée retour à l'état initial des tableaux/objet/localStorage
       contact = {};
       productToAPI = [];
