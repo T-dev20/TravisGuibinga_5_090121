@@ -345,7 +345,7 @@ checkBasket = () => {
 
 //Tableau et objet demandé par l'API pour la commande
 let contact;
-let productToAPI = [];
+let products = [];
 let url = "http://localhost:3000/api/furniture/order";
 
 
@@ -354,7 +354,7 @@ const sendData = () => {
 	//Création de l'objet à envoyer
 	let objet = {
 	contact,
-	productToAPI,
+	products,
 	};
 	console.log("Administration : " + objet);
 	//Conversion de l'objet "objet" en string, puis envoie.
@@ -387,14 +387,14 @@ validForm = () =>{
 	if(checkBasket() == true && checkInput() != null){
 	console.log("Administration : L'envoi peut être fait");
 	userBasket.forEach((product) => {
-        productToAPI.push(product._id);
+        products.push(product._id);
       });
-	  console.log("Ce tableau sera envoyé à l'API : " + productToAPI);
+	  console.log("Ce tableau sera envoyé à l'API : " + products);
 	  
 	  sendData();
       //Une fois la commande effectuée retour à l'état initial des tableaux/objet/localStorage
       contact = {};
-      productToAPI = [];
+      products = [];
       localStorage.clear();
     } else {
       console.log("ERROR");
