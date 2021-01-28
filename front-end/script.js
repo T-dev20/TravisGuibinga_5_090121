@@ -387,7 +387,7 @@ validForm = () =>{
 	//Création de l'objet à envoyer
 	let objet = {
 	contact,
-	products
+	products,
 	};
 	console.log("Administration : " + objet);
 	//Conversion de l'objet "objet" en string, puis envoie.
