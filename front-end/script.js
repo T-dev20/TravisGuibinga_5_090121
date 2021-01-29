@@ -424,62 +424,62 @@ resultOrder = () =>{
 };
 
 
-recapCommande = () => {
-	//Création de la structure principale du tableau  
-      let facture = document.createElement("table");
-      let firstRowTable = document.createElement("tr");
-      let columnName = document.createElement("th");
-	  let columnPriceUnit = document.createElement("th");
-	 // let columnRemove = document.createElement("td");
-      let rowTotal = document.createElement("tr");
-      let columnRefTotal = document.createElement("th");
-      let colPriceTotal = document.createElement("td");
+// recapCommande = () => {
+// 	//Création de la structure principale du tableau  
+//       let facture = document.createElement("table");
+//       let firstRowTable = document.createElement("tr");
+//       let columnName = document.createElement("th");
+// 	  let columnPriceUnit = document.createElement("th");
+// 	 // let columnRemove = document.createElement("td");
+//       let rowTotal = document.createElement("tr");
+//       let columnRefTotal = document.createElement("th");
+//       let colPriceTotal = document.createElement("td");
 
-      //Placement de la structure du tableau dans la page panier
-      let factureSection = document.getElementById("confirmation-recap");
-      factureSection.appendChild(facture);
-      facture.appendChild(firstRowTable);
-      firstRowTable.appendChild(columnName);
-      columnName.textContent = "Nom du produit";
-      firstRowTable.appendChild(columnPriceUnit);
-	  columnPriceUnit.textContent = "Prix du produit";
+//       //Placement de la structure du tableau dans la page panier
+//       let factureSection = document.getElementById("confirmation-recap");
+//       factureSection.appendChild(facture);
+//       facture.appendChild(firstRowTable);
+//       firstRowTable.appendChild(columnName);
+//       columnName.textContent = "Nom du produit";
+//       firstRowTable.appendChild(columnPriceUnit);
+// 	  columnPriceUnit.textContent = "Prix du produit";
 
-	  //Incrémentation de l'id des lignes pour chaque produit
-	  let i = 0;
-	  let order = JSON.parse(sessionStorage.getItem("order"));
+// 	  //Incrémentation de l'id des lignes pour chaque produit
+// 	  let i = 0;
+// 	  let order = JSON.parse(sessionStorage.getItem("order"));
 
-	  order.forEach((orderArticle)=> {
-		let ligneProduct = document.createElement("tr");
-        let nameProduct = document.createElement("td");
-        let priceUnitProduct = document.createElement("td");
+// 	  order.forEach((orderArticle)=> {
+// 		let ligneProduct = document.createElement("tr");
+//         let nameProduct = document.createElement("td");
+//         let priceUnitProduct = document.createElement("td");
 
-		//Attribution des class ou Id
-		ligneProduct.setAttribute("id", "article_acheté"+i);
+// 		//Attribution des class ou Id
+// 		ligneProduct.setAttribute("id", "article_acheté"+i);
 
-		//Insertion dans le HTML
-		facture.appendChild(ligneProduct);
-		facture.appendChild(nameProduct);
-		facture.appendChild(priceUnitProduct);
+// 		//Insertion dans le HTML
+// 		facture.appendChild(ligneProduct);
+// 		facture.appendChild(nameProduct);
+// 		facture.appendChild(priceUnitProduct);
 
-		//Contenu des lignes
-		nameProduct.textContent = orderArticle.name;
-		priceUnitProduct.textContent = orderArticle.price / 100 + " €";
-	  });
+// 		//Contenu des lignes
+// 		nameProduct.textContent = orderArticle.name;
+// 		priceUnitProduct.textContent = orderArticle.price / 100 + " €";
+// 	  });
 
-	  //Dernière ligne du tableau : Total
-		facture.appendChild(rowTotal);
-		rowTotal.appendChild(columnRefTotal);
-		columnRefTotal.textContent = "Total payé"
-		rowTotal.appendChild(colPriceTotal);
-		colPriceTotal.setAttribute("id", "sommeConfirmTotal")
+// 	  //Dernière ligne du tableau : Total
+// 		facture.appendChild(rowTotal);
+// 		rowTotal.appendChild(columnRefTotal);
+// 		columnRefTotal.textContent = "Total payé"
+// 		rowTotal.appendChild(colPriceTotal);
+// 		colPriceTotal.setAttribute("id", "sommeConfirmTotal")
 
-		//Calcule de la somme totale réglée
-		let totalConfirmPaye = 0;
-		order.forEach((product)=>{
-			totalConfirmPaye += product.price / 100;
-		});
+// 		//Calcule de la somme totale réglée
+// 		let totalConfirmPaye = 0;
+// 		order.forEach((product)=>{
+// 			totalConfirmPaye += product.price / 100;
+// 		});
 
-		//Affichage du prix total réglé
-		console.log("Administration : " + totalConfirmPaye);
-		document.getElementById("sommeConfirmTotal").textContent = totalConfirmPaye + " €";
-};
+// 		//Affichage du prix total réglé
+// 		console.log("Administration : " + totalConfirmPaye);
+// 		document.getElementById("sommeConfirmTotal").textContent = totalConfirmPaye + " €";
+// };
