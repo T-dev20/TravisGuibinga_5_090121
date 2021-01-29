@@ -424,7 +424,8 @@ resultOrder = () =>{
 
 recapCommande = () => {
 	//Création de la structure principale du tableau  
-      let facture = document.createElement("table");
+	  let facture = document.createElement("table");
+	  facture.setAttribute('id', 'tableConfirm');
       let firstRowTable = document.createElement("tr");
       let columnName = document.createElement("th");
 	  let columnPriceUnit = document.createElement("th");
