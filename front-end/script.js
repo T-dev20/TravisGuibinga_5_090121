@@ -390,9 +390,10 @@ validForm = () =>{
 		console.log("Administration : " + objet);
 		//Conversion de l'objet "objet" en string, puis envoie.
 		let formSend = JSON.stringify(objet);
+		sendData(formSend);
 		console.log(objet);
 
-	  sendData(formSend);
+	  
       //Une fois la commande effectuée retour à l'état initial des tableaux/objet/localStorage
       contact = {};
       products = [];
