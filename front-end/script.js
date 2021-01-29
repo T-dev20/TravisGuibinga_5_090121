@@ -448,7 +448,7 @@ recapCommande = () => {
 	  let i = 0;
 	  let order = JSON.parse(sessionStorage.getItem("order"));
 
-	  order.forEach((orderArticle)=> {
+	  order.products.forEach((orderArticle)=> {
 		let ligneProduct = document.createElement("tr");
         let nameProduct = document.createElement("td");
         let priceUnitProduct = document.createElement("td");
@@ -475,7 +475,7 @@ recapCommande = () => {
 
 		//Calcule de la somme totale réglée
 		let totalConfirmPaye = 0;
-		order.forEach((product)=>{
+		order.products.forEach((product)=>{
 			totalConfirmPaye += product.price / 100;
 		});
 
