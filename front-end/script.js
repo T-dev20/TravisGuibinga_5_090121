@@ -350,16 +350,7 @@ let url = "http://localhost:3000/api/furniture/order";
 
 
 //Fonction requête post de l'API
-const sendData = () => {
-	//Création de l'objet à envoyer
-	let objet = {
-	contact,
-	products,
-	};
-	console.log("Administration : " + objet);
-	//Conversion de l'objet "objet" en string, puis envoie.
-	var formSend = JSON.stringify(objet);
-    console.log(objet);
+const sendData = (formSend) => {
   	return new Promise((resolve)=>{
   		let request = new XMLHttpRequest();
   		request.onload = function() {
@@ -391,7 +382,17 @@ validForm = () =>{
       });
 	  console.log("Ce tableau sera envoyé à l'API : " + products);
 	  
-	  sendData();
+	  //Création de l'objet à envoyer
+	  let objet = {
+		contact,
+		products,
+		};
+		console.log("Administration : " + objet);
+		//Conversion de l'objet "objet" en string, puis envoie.
+		var formSend = JSON.stringify(objet);
+		console.log(objet);
+
+	  sendData(formSend);
       //Une fois la commande effectuée retour à l'état initial des tableaux/objet/localStorage
       contact = {};
       products = [];
@@ -446,7 +447,7 @@ recapCommande = () => {
 	  let i = 0;
 	  let order = JSON.parse(sessionStorage.getItem("order"));
 
-	  order.products.forEach((orderArticle)=> {
+	  order.forEach((orderArticle)=> {
 		let ligneProduct = document.createElement("tr");
         let nameProduct = document.createElement("td");
         let priceUnitProduct = document.createElement("td");
@@ -473,7 +474,7 @@ recapCommande = () => {
 
 		//Calcule de la somme totale réglée
 		let totalConfirmPaye = 0;
-		order.products.forEach((product)=>{
+		order.forEach((product)=>{
 			totalConfirmPaye += product.price / 100;
 		});
 
