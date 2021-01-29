@@ -305,7 +305,7 @@ removeProduct = (i) => {
         if(checkNumber.test(formVille) == true && checkSpecialCharacter.test(formVille) == true || formVille == ""){
         	checkMessage = checkMessage + "\n" + "Vérifier/renseigner votre ville. Les caractères spéciaux ou les chiffres ne sont pas autorisés";
         }else{
-        	console.log("Administration : Ville ok")
+        	console.log("Administration : Ville ok");
         }
         //Si un des champs n'est pas bon => message d'alert avec la raison
         if(checkMessage != ""){
