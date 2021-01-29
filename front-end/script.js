@@ -303,7 +303,7 @@ removeProduct = (i) => {
         }
         //Test de la ville => aucune ville en France ne comporte de chiffre ou charactères spéciaux
         if(checkNumber.test(formVille) == true && checkSpecialCharacter.test(formVille) == true || formVille == ""){
-        	checkMessage = checkMessage + "\n" + "Vérifier/renseigner votre ville. Les caractères spéciaux ou les chiffres ne sont pas autorisés"
+        	checkMessage = checkMessage + "\n" + "Vérifier/renseigner votre ville. Les caractères spéciaux ou les chiffres ne sont pas autorisés";
         }else{
         	console.log("Administration : Ville ok")
         }
