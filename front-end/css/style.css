@@ -571,3 +571,7 @@ table tr th {
 .recapitulatif {
   text-align: center;
 }
+
+#tableConfirm {
+  border: 1px solid #bebebe;
+}
