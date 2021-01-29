@@ -389,7 +389,7 @@ validForm = () =>{
 		};
 		console.log("Administration : " + objet);
 		//Conversion de l'objet "objet" en string, puis envoie.
-		var formSend = JSON.stringify(objet);
+		let formSend = JSON.stringify(objet);
 		console.log(objet);
 
 	  sendData(formSend);
