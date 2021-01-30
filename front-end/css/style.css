@@ -578,6 +578,12 @@ table tr th {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .order-confirm__card {
+    width: 70%;
+  }
+}
+
 #tableConfirm {
   border: 1px solid #bebebe;
   padding: 15px;
