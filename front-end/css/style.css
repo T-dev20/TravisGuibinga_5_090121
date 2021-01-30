@@ -572,6 +572,12 @@ table tr th {
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  .recapitulatif h2 {
+    font-size: 40px;
+  }
+}
+
 #tableConfirm {
   border: 1px solid #bebebe;
   padding: 15px;
