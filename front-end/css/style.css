@@ -575,3 +575,17 @@ table tr th {
 #tableConfirm {
   border: 1px solid #bebebe;
 }
+
+@media (min-width: 1024px) {
+  #tableConfirm {
+    font-size: x-large;
+    width: 70%;
+  }
+  #tableConfirm th {
+    font-size: x-large;
+  }
+  #tableConfirm td {
+    font-size: x-large;
+    padding: 15px;
+  }
+}
