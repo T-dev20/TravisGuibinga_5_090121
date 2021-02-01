@@ -125,25 +125,40 @@ async function productDetails (){
 	//Pour chaque verni on crée une option permettant à l'utilisateur de faire son choix
 	productSelected.varnish.forEach((product)=>{
     		let optionProduct = document.createElement("option");
-    		document.getElementById("optionSelect").appendChild(optionProduct).innerHTML = product;
+			document.getElementById("optionSelect").appendChild(optionProduct).innerHTML = product;
+			
     	});
 };
 
 
 /*Fonction pour ajout de produit au panier et renvoie de l'historique en Objet Js*/
-addToBasket = () => {
+addToBasket = () => {	
   	//Au clic de l'user pour mettre le produit dans le panier
   	let inputBuy = document.getElementById("addProductToBasket");
   	inputBuy.addEventListener("click", async function() {
-  		const prod = await provideProducts();
+		  const prod = await provideProducts();
   	//Récupération du panier dans le localStorage et ajout du produit dans le panier avant revoit dans le localStorage
   	userBasket.push(prod);
   	localStorage.setItem("basketUser", JSON.stringify(userBasket));
 	console.log("Administration : le produit a été ajouté au panier");
+
+	
 	alert("Cet article a été ajouté dans votre panier");
     location.reload();
   });
   };
+
+
+let optionProd = document.getElementById("optionSelect");
+optionProd.addEventListener('change', optionSelect());
+
+function optionSelect(event) {
+		event.preventDefault;
+		if(optionProd.target.value != prod.varnish) {
+			alert("Veuillez choisir une option");
+	}else {
+}
+}
 
 
 /*Fonction d'affichage du nbre de poduits sur l'icon du panier
