@@ -314,8 +314,8 @@ removeProduct = (i) => {
         //Si le formulaire est validé => construction de l'objet contact
         else{
         	contact = {
+				lastName : formNom,
         		firstName : formPrenom,
-        		lastName : formNom,
         		address : formAdresse,
         		city : formVille,
         		email : formMail
