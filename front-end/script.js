@@ -124,7 +124,8 @@ async function productDetails (){
 
 	//Pour chaque verni on crée une option permettant à l'utilisateur de faire son choix
 	productSelected.varnish.forEach((product)=>{
-    		let optionProduct = document.createElement("option");
+			let optionProduct = document.createElement("option");
+			optionProduct.setAttribute('value', product);
 			document.getElementById("optionSelect").appendChild(optionProduct).innerHTML = product;
 			
     	});
