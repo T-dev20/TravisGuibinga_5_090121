@@ -378,6 +378,7 @@ validForm = () =>{
 	if(checkBasket() == true && checkInput() != null){
 	console.log("Administration : L'envoi peut être fait");
 	userBasket.forEach((product) => {
+		//Le push sert à Ajouter de nouveaux éléments à un tableau, puis renvoie la nouvelle longueur du tableau.
         products.push(product._id);
       });
 	  console.log("Ce tableau sera envoyé à l'API : " + products);
