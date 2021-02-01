@@ -395,7 +395,7 @@ validForm = () =>{
 		console.log(objet);
 
 	  
-      //Une fois la commande effectuée retour à l'état initial des tableaux/objet/localStorage
+      //Une fois la commande effectuée retour à l'état initial de l'objet, du tableau et du localStorage
       contact = {};
       products = [];
       localStorage.clear();
