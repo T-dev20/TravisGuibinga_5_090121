@@ -236,7 +236,7 @@ recapProducts = () =>{
 		});
 
 		//Affichage du prix total à régler
-		console.log("Administration : " + totalPaye);
+		console.log("total à payer : " + totalPaye);
 		document.getElementById("sommeTotal").textContent = totalPaye + " €";
 }	
 };
