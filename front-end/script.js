@@ -353,7 +353,7 @@ let url = "http://localhost:3000/api/furniture/order";
 const sendData = (formSend) => {
   	return new Promise((resolve)=>{
   		let request = new XMLHttpRequest();
-  		request.onload = function() {
+  		request.onreadystatechange = function() {
   			if(this.readyState == XMLHttpRequest.DONE && this.status == 201){
          	    //Sauvegarde du retour de l'API dans la sessionStorage pour affichage dans confirm.html
 				sessionStorage.setItem("order", this.responseText);
