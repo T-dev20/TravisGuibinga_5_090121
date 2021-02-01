@@ -479,6 +479,6 @@ recapCommande = () => {
 		});
 
 		//Affichage du prix total réglé
-		console.log("Administration : " + totalConfirmPaye);
+		console.log("Prix total de la commande : " + totalConfirmPaye + " €");
 		document.getElementById("sommeConfirmTotal").textContent = totalConfirmPaye + " €";
 };
