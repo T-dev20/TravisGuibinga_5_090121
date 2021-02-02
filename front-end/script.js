@@ -137,7 +137,6 @@ checkOption = () => {
 	optionStatut.addEventListener('change', (event) => {
 		event.preventDefault();
 		if  (optionStatut.selectedIndex == -1 || optionStatut.selectedIndex < 1) {
-			alert("Veuillez choisir une option");
 			return false;
 		} else {
 			console.log("une option a été choisie");
