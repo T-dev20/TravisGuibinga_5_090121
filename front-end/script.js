@@ -131,6 +131,19 @@ async function productDetails (){
     	});
 };
 
+//Vérification du choix de l'option
+checkOption = () => {
+	let optionStatut = document.getElementById('optionSelect');
+	//Si le panier est vide ou null
+	if  (optionStatut.) {
+		alert("Votre panier est vide");
+		return false;
+	} else {
+		console.log("Le panier n'est pas vide");
+		return true;
+	}
+};
+
 
 /*Fonction pour ajout de produit au panier et renvoie de l'historique en Objet Js*/
 addToBasket = () => {	
@@ -148,9 +161,6 @@ addToBasket = () => {
     location.reload();
   });
   };
-
-
-// ZZZ
 
 
 /*Fonction d'affichage du nbre de poduits sur l'icon du panier
