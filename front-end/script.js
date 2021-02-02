@@ -125,7 +125,7 @@ async function productDetails (){
 	//Pour chaque verni on crée une option permettant à l'utilisateur de faire son choix
 	productSelected.varnish.forEach((product)=>{
 			let optionProduct = document.createElement("option");
-			optionProduct.setAttribute('value', product);
+			optionProduct.setAttribute('value', product.varnish);
 			document.getElementById("optionSelect").appendChild(optionProduct).innerHTML = product;
 			
     	});
@@ -150,16 +150,16 @@ addToBasket = () => {
   };
 
 
-let optionProd = document.getElementById("optionSelect");
-optionProd.addEventListener('change', optionSelect());
+// let optionProd = document.getElementById("optionSelect");
+// optionProd.addEventListener('change', optionSelect());
 
-function optionSelect(event) {
-		event.preventDefault;
-		if(optionProd.target.value != prod.varnish) {
-			alert("Veuillez choisir une option");
-	}else {
-}
-}
+// function optionSelect(event) {
+// 		event.preventDefault;
+// 		if(optionProd.target.value != prod.varnish) {
+// 			alert("Veuillez choisir une option");
+// 	}else {
+// }
+// }
 
 
 /*Fonction d'affichage du nbre de poduits sur l'icon du panier
