@@ -382,8 +382,8 @@ footer p {
 .basketLink {
   text-decoration: none;
   display: flex;
-  flex-direction: column-reverse;
-  margin-top: -5px;
+  flex-direction: row;
+  align-content: space-around;
 }
 @media (min-width: 768px) {
   .basketLink {
@@ -392,11 +392,13 @@ footer p {
 }
 .basketLink .countProd {
   font-size: 1.2rem;
+  display: inline-block;
+  position: relative;
   text-align: center;
   font-weight: bold;
   color: #b06da1;
-  margin-bottom: -16px;
-  margin-left: 5px;
+  bottom: 10px;
+  right: 16px;
 }
 @media (min-width: 768px) {
   .basketLink .countProd {
@@ -605,10 +607,4 @@ table tr th {
   #tableConfirm td {
     font-size: x-large;
   }
-}
-
-.basketLink {
-  display: flex;
-  flex-direction: row;
-  align-content: space-around;
 }
