@@ -404,6 +404,11 @@ footer p {
   .basketLink .countProd {
     font-size: 1.4rem;
   }
+  .basketLink .cart {
+    display: inline-block;
+    position: relative;
+    top: 11px;
+  }
 }
 .form__group {
   display: flex;
