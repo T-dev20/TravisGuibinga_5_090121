@@ -134,15 +134,12 @@ async function productDetails (){
 //Vérification du choix de l'option
 checkOption = () => {
 	let optionStatut = document.getElementById('optionSelect');
-	optionStatut.addEventListener('change', (event) => {
-		event.preventDefault();
 		if  (optionStatut.selectedIndex == -1 || optionStatut.selectedIndex < 1) {
 			return false;
 		} else {
 			console.log("une option a été choisie");
 			return true;
 		}
-	})
 };
 
 
@@ -175,9 +172,9 @@ addToBasket = () => {
 		//Récupération du panier dans le localStorage et ajout du produit dans le panier avant revoit dans le localStorage
 		userBasket.push(prod);
 		localStorage.setItem("basketUser", JSON.stringify(userBasket));
-		console.log("Administration : le produit a été ajouté au panier");
-		alert("Cet article a été ajouté dans votre panier");
-		location.reload();
+		// console.log("Administration : le produit a été ajouté au panier");
+		// alert("Cet article a été ajouté dans votre panier");
+		// location.reload();
 			
   });
   };
