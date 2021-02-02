@@ -146,6 +146,13 @@ checkOption = () => {
 };
 
 
+// if(checkOption() == true){
+			
+			
+// 		}else{
+// 			alert("Veuillez choisir une option");	
+// 		}
+
 // async function checkAddProd() {
 // 	const prod = await provideProducts();
 //   	//Récupération du panier dans le localStorage et ajout du produit dans le panier avant revoit dans le localStorage
@@ -164,19 +171,14 @@ addToBasket = () => {
   	//Au clic de l'user pour mettre le produit dans le panier
   	let inputBuy = document.getElementById("addProductToBasket");
   	inputBuy.addEventListener("click", async function() {
-	if(checkOption() == true){
 		const prod = await provideProducts();
 		//Récupération du panier dans le localStorage et ajout du produit dans le panier avant revoit dans le localStorage
 		userBasket.push(prod);
 		localStorage.setItem("basketUser", JSON.stringify(userBasket));
 		console.log("Administration : le produit a été ajouté au panier");
-
-		
 		alert("Cet article a été ajouté dans votre panier");
 		location.reload();
-	}else{
-		alert("Veuillez choisir une option");	
-	}
+			
   });
   };
 
