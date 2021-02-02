@@ -417,6 +417,18 @@ footer p {
     top: 11px;
   }
 }
+
+.textBasket {
+  display: inline-block;
+  position: relative;
+  bottom: 20px;
+  left: -8px;
+}
+@media (min-width: 768px) {
+  .textBasket {
+    bottom: 12px;
+  }
+}
 .form__group {
   display: flex;
   flex-direction: column;
