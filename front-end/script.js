@@ -338,7 +338,7 @@ checkBasket = () => {
 	let basketStatut = JSON.parse(localStorage.getItem("basketUser"));
 	//Si le panier est vide ou null
 	if  (basketStatut.length < 1 || basketStatut == null) {
-		alert("Votre panier est vide");
+		alert("Votre panier est vide. Veuillez ajouter un produit dans votre panier.");
 		return false;
 	} else {
 		console.log("Le panier n'est pas vide");
