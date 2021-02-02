@@ -606,3 +606,7 @@ table tr th {
     font-size: x-large;
   }
 }
+
+.basketLink {
+  display: block;
+}
