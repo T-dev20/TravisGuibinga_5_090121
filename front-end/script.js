@@ -164,7 +164,12 @@ async function checkAddProd() {
 addToBasket = () => {	
   	//Au clic de l'user pour mettre le produit dans le panier
   	let inputBuy = document.getElementById("addProductToBasket");
-  	inputBuy.addEventListener("click", 
+  	inputBuy.addEventListener("click", (event) => {
+		event.preventDefault;
+		if(checkOption() == true) {
+			checkAddProd();
+		}  
+	  })
   };
 
 
