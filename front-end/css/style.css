@@ -397,9 +397,16 @@ footer p {
   text-align: center;
   font-weight: bold;
   color: #b06da1;
-  bottom: 8px;
+  bottom: 5px;
   right: 16px;
 }
+
+.basketLink .cart {
+  display: inline-block;
+  position: relative;
+  top: 3px;
+}
+
 @media (min-width: 768px) {
   .basketLink .countProd {
     font-size: 1.4rem;
@@ -407,8 +414,6 @@ footer p {
     right: 17px;
   }
   .basketLink .cart {
-    display: inline-block;
-    position: relative;
     top: 11px;
   }
 }
