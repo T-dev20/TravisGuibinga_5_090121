@@ -147,12 +147,8 @@ checkOption = () => {
 };
 
 
-/*Fonction pour ajout de produit au panier et renvoie de l'historique en Objet Js*/
-addToBasket = () => {	
-  	//Au clic de l'user pour mettre le produit dans le panier
-  	let inputBuy = document.getElementById("addProductToBasket");
-  	inputBuy.addEventListener("click", async function() {
-		  const prod = await provideProducts();
+async function checkAddProd() {
+	const prod = await provideProducts();
   	//Récupération du panier dans le localStorage et ajout du produit dans le panier avant revoit dans le localStorage
   	userBasket.push(prod);
   	localStorage.setItem("basketUser", JSON.stringify(userBasket));
@@ -161,7 +157,14 @@ addToBasket = () => {
 	
 	alert("Cet article a été ajouté dans votre panier");
     location.reload();
-  });
+  }
+
+
+/*Fonction pour ajout de produit au panier et renvoie de l'historique en Objet Js*/
+addToBasket = () => {	
+  	//Au clic de l'user pour mettre le produit dans le panier
+  	let inputBuy = document.getElementById("addProductToBasket");
+  	inputBuy.addEventListener("click", 
   };
 
 
