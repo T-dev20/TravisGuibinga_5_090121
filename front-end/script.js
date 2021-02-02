@@ -134,14 +134,16 @@ async function productDetails (){
 //Vérification du choix de l'option
 checkOption = () => {
 	let optionStatut = document.getElementById('optionSelect');
-	//Si le panier est vide ou null
-	if  (optionStatut.) {
-		alert("Votre panier est vide");
-		return false;
-	} else {
-		console.log("Le panier n'est pas vide");
-		return true;
-	}
+	optionStatut.addEventListener('change', () => {
+
+		if  (optionStatut.selectedIndex < 1) {
+			alert("Veuillez choisir une option");
+			return false;
+		} else {
+			console.log("une option a été choisie");
+			return true;
+		}
+	})
 };
 
 
