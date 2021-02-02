@@ -273,6 +273,20 @@ removeProduct = (i) => {
 /*Formulaire et vérification de l'etat du panier
 *************************************************/
 
+	//Vérification du panier
+	checkBasket = () => {
+		//Vérifier qu'il y ai au moins un produit dans le panier
+		let basketStatut = JSON.parse(localStorage.getItem("basketUser"));
+		//Si le panier est vide ou null
+		if  (basketStatut.length < 1 || basketStatut == null) {
+			alert("Votre panier est vide");
+			return false;
+		} else {
+			console.log("Le panier n'est pas vide");
+			return true;
+		}
+	};
+	
   //vérifie les inputs du formulaire
   checkInput = () =>{
     //Controle Regex
@@ -339,21 +353,6 @@ removeProduct = (i) => {
         	return contact;
         }
 	};
-	
-
-//Vérification du panier
-checkBasket = () => {
-	//Vérifier qu'il y ai au moins un produit dans le panier
-	let basketStatut = JSON.parse(localStorage.getItem("basketUser"));
-	//Si le panier est vide ou null
-	if  (basketStatut.length < 1 || basketStatut == null) {
-		alert("Votre panier est vide");
-		return false;
-	} else {
-		console.log("Le panier n'est pas vide");
-		return true;
-	}
-};
 
 
 /*Envoi du formulaire à l'API
