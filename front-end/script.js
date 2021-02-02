@@ -134,8 +134,8 @@ async function productDetails (){
 //Vérification du choix de l'option
 checkOption = () => {
 	let optionStatut = document.getElementById('optionSelect');
-	optionStatut.addEventListener('change', () => {
-
+	optionStatut.addEventListener('change', (event) => {
+		event.preventDefault();
 		if  (optionStatut.selectedIndex < 1) {
 			alert("Veuillez choisir une option");
 			return false;
@@ -147,8 +147,25 @@ checkOption = () => {
 };
 
 
-async function checkAddProd() {
-	const prod = await provideProducts();
+// async function checkAddProd() {
+// 	const prod = await provideProducts();
+//   	//Récupération du panier dans le localStorage et ajout du produit dans le panier avant revoit dans le localStorage
+//   	userBasket.push(prod);
+//   	localStorage.setItem("basketUser", JSON.stringify(userBasket));
+// 	console.log("Administration : le produit a été ajouté au panier");
+
+	
+// 	alert("Cet article a été ajouté dans votre panier");
+//     location.reload();
+//   }
+
+
+/*Fonction pour ajout de produit au panier et renvoie de l'historique en Objet Js*/
+addToBasket = () => {	
+  	//Au clic de l'user pour mettre le produit dans le panier
+  	let inputBuy = document.getElementById("addProductToBasket");
+  	inputBuy.addEventListener("click", async function() {
+		  const prod = await provideProducts();
   	//Récupération du panier dans le localStorage et ajout du produit dans le panier avant revoit dans le localStorage
   	userBasket.push(prod);
   	localStorage.setItem("basketUser", JSON.stringify(userBasket));
@@ -157,19 +174,7 @@ async function checkAddProd() {
 	
 	alert("Cet article a été ajouté dans votre panier");
     location.reload();
-  }
-
-
-/*Fonction pour ajout de produit au panier et renvoie de l'historique en Objet Js*/
-addToBasket = () => {	
-  	//Au clic de l'user pour mettre le produit dans le panier
-  	let inputBuy = document.getElementById("addProductToBasket");
-  	inputBuy.addEventListener("click", (event) => {
-		event.preventDefault;
-		if(checkOption() == true) {
-			checkAddProd();
-		}  
-	  })
+  });
   };
 
 
